@@ -21,13 +21,7 @@ public class FoodSpawner : MonoBehaviour {
     }
 
     void SpawnNewFood(){
-        Transform food;
-        if(JunkFoods.Length > HealthyFoods.Length){
-            food = HealthyFood;
-        }
-        else{
-            food = JunkFood;
-        }
+        Transform food = (JunkFoods.Length > HealthyFoods.Length) ? HealthyFood : JunkFood;
 
         Instantiate(food, SelectSpawnPoint(), Quaternion.identity);
         UpdateFoodLists();
