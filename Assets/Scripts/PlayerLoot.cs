@@ -6,11 +6,11 @@ public class PlayerLoot : MonoBehaviour {
     public int JunkCount, HealthCount;
     public List<string> LootedJunkFood = new List<string>();
     public List<string> LootedHealthyFood = new List<string>();
-
+    public FoodSpawner foodSpawner;
 
 	// Use this for initialization
 	void Start () {
-		
+       // foodSpawner = gameObject.GetComponent(typeof(FoodSpawner)) as FoodSpawner;
 	}
 	
 	// Update is called once per frame
@@ -27,12 +27,15 @@ public class PlayerLoot : MonoBehaviour {
             JunkCount++;
             LootedJunkFood.Add(col.gameObject.name);
             Destroy(col.gameObject);
+            foodSpawner.SelectSpawnPoint();
         }           
         else if( collisionTag == "HealthyFood")
         {
             HealthCount++;
             LootedHealthyFood.Add(col.gameObject.name);
             Destroy(col.gameObject);
+            foodSpawner.SelectSpawnPoint();
+
         }
     }
 }

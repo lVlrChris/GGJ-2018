@@ -14,9 +14,10 @@ public class FoodSpawner : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         freeSpawnPoints = new List<GameObject>(spawnPoints);
+        SelectSpawnPoint();
 	}
 
-    void SelectSpawnPoint(){
+    public void SelectSpawnPoint(){
         int randomIndex = Random.Range(0, spawnPoints.Count);
         Debug.Log("INDEX" + randomIndex);
    //     Vector3 spawnPoint =  spawnPoints[randomIndex].transform.position;
