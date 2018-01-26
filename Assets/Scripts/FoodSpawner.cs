@@ -18,7 +18,7 @@ public class FoodSpawner : MonoBehaviour {
 
     void SelectSpawnPoint(){
         int randomIndex = Random.Range(0, spawnPoints.Count);
-        Debug.Log(randomIndex);
+        Debug.Log("INDEX" + randomIndex);
    //     Vector3 spawnPoint =  spawnPoints[randomIndex].transform.position;
    //     Debug.Log(CheckIfSpawnIsFree(spawnPoint));
 
@@ -29,6 +29,9 @@ public class FoodSpawner : MonoBehaviour {
                 Debug.Log("free: " + spwnpnt);
                 SpawnNewFood(spwnpnt);
                 return;
+            }
+            else {
+                Debug.Log("not free");
             }
         }
  
@@ -45,7 +48,7 @@ public class FoodSpawner : MonoBehaviour {
     bool CheckIfSpawnIsFree(Vector3 spawnPoint){
         
         var spawnPointColliders = Physics.OverlapSphere(spawnPoint, 1);
-        Debug.Log(spawnPointColliders.Length);
+        Debug.Log("COLLLL" + spawnPointColliders.Length);
         return !(spawnPointColliders.Length > 1);
     }
 

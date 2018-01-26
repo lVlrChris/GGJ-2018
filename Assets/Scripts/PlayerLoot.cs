@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerLoot : MonoBehaviour {
     public int JunkCount, HealthCount;
+    public List<string> LootedJunkFood = new List<string>();
+    public List<string> LootedHealthyFood = new List<string>();
+
 
 	// Use this for initialization
 	void Start () {
@@ -19,13 +22,16 @@ public class PlayerLoot : MonoBehaviour {
     {
         var collisionTag = col.gameObject.tag;
         Debug.Log(collisionTag);
+
         if (collisionTag == "JunkFood"){
             JunkCount++;
+            LootedJunkFood.Add(col.gameObject.name);
             Destroy(col.gameObject);
         }           
         else if( collisionTag == "HealthyFood")
         {
             HealthCount++;
+            LootedHealthyFood.Add(col.gameObject.name);
             Destroy(col.gameObject);
         }
     }
