@@ -6,6 +6,7 @@ TagManager:
   tags:
   - JunkFood
   - HealthyFood
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX
