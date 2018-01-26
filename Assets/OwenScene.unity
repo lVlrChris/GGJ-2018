@@ -421,10 +421,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f886ef8ad16440cba5f8fdd4e2dd0e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frikandel: {fileID: 4409902595362008, guid: 1772658ab5d7445339eda5aab28e2830, type: 2}
+  JunkFood: {fileID: 4409902595362008, guid: 1772658ab5d7445339eda5aab28e2830, type: 2}
+  HealthyFood: {fileID: 4228199618573202, guid: b44408db9864644b8bb3cc18e4c9de60,
+    type: 2}
   spawnPoints:
   - {fileID: 1049812758308610, guid: dca8d237b606943ceae71e026ac6d6f7, type: 2}
   - {fileID: 1658775354}
+  JunkFoods: []
+  HealthyFoods: []
 --- !u!4 &1871553571
 Transform:
   m_ObjectHideFlags: 0

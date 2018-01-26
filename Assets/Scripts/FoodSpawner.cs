@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FoodSpawner : MonoBehaviour {
-    public Transform frikandel;
+    public Transform JunkFood;
+    public Transform HealthyFood;
     public List<GameObject> spawnPoints = new List<GameObject>();
 
-    private GameObject[] JunkFoods;
-    private GameObject[] HealthyFoods;
+    public GameObject[] JunkFoods;
+    public GameObject[] HealthyFoods;
 
 	// Use this for initialization
 	void Start () {
@@ -20,14 +21,21 @@ public class FoodSpawner : MonoBehaviour {
     }
 
     void SpawnNewFood(){
-        Instantiate(frikandel, SelectSpawnPoint(), Quaternion.identity);
+        Transform food;
+        if(JunkFoods.Length > HealthyFoods.Length){
+            food = HealthyFood;
+        }
+        else{
+            food = JunkFood;
+        }
 
+        Instantiate(food, SelectSpawnPoint(), Quaternion.identity);
+        UpdateFoodLists();
     }
 
     void UpdateFoodLists(){
-        JunkFoods = GameObject.FindGameObjectsWithTag("JunkFoods");
-        HealthyFoods = GameObject.FindGameObjectsWithTag("HealthyFoods");
-
+        JunkFoods = GameObject.FindGameObjectsWithTag("JunkFood");
+        HealthyFoods = GameObject.FindGameObjectsWithTag("HealthyFood");
     }
 	
 	// Update is called once per frame
