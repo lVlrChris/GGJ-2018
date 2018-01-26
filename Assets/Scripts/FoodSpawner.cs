@@ -49,7 +49,7 @@ public class FoodSpawner : MonoBehaviour {
         
         var spawnPointColliders = Physics.OverlapSphere(spawnPoint, 1);
         Debug.Log("COLLLL" + spawnPointColliders.Length);
-        return !(spawnPointColliders.Length > 1);
+        return !(spawnPointColliders.Length > 2);
     }
 
 
