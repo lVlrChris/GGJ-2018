@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23278590016854510}
   - component: {fileID: 54208167489450226}
   m_Layer: 0
-  m_Name: Apple 1
+  m_Name: Apple
   m_TagString: HealthyFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

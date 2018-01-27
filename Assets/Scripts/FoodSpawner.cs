@@ -41,8 +41,8 @@ public class FoodSpawner : MonoBehaviour {
 
     void SpawnNewFood( GameObject spawnPoint){
         Transform food = (JunkFoods.Length > HealthyFoods.Length) ? HealthyFood : JunkFood;
-
-        Instantiate(food, spawnPoint.transform.position, Quaternion.identity);
+        Transform go = Instantiate(food, spawnPoint.transform.position, Quaternion.identity) as Transform;
+        go.name = go.name.Split('(')[0];
         UpdateFoodLists();
     }
 
