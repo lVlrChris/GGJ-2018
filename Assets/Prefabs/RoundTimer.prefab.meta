@@ -1,16 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream:Assets/Prefabs/RoundTimer.prefab.meta
 guid: 085f1a26632aea64b8ebbec5759b66e2
-timeCreated: 1517082225
-=======
-<<<<<<< Updated upstream
-guid: 2733917b69044e042af3af63cf52b9d1
-timeCreated: 1517081771
-=======
-guid: c581ffaef828b48deb8d606f9776e050
-timeCreated: 1517074420
->>>>>>> Stashed changes
->>>>>>> Stashed changes:Assets/Music.meta~Stashed changes.meta
+timeCreated: 1517082491
 licenseType: Free
 NativeFormatImporter:
   externalObjects: {}
