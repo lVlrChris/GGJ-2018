@@ -44,11 +44,14 @@ public class GameManager : MonoBehaviour {
 
     public IEnumerator EndTheGame()
     {
+        PlayerInfo p1Info = p1.GetComponent<PlayerInfo>();
+        PlayerInfo p2Info = p2.GetComponent<PlayerInfo>();
 
-        PlayerEndScreenStats p1stats = new PlayerEndScreenStats(p1.GetComponent<PlayerInfo>().firedShots, p1.GetComponent<PlayerInfo>().landedShots,
-                                                                p1.GetComponent<PlayerInfo>().junkPercentage, p1.GetComponent<PlayerInfo>().healthyPercentage, p1.GetComponent<PlayerInfo>().GetDietPoints());
-        PlayerEndScreenStats p2stats = new PlayerEndScreenStats(p2.GetComponent<PlayerInfo>().firedShots, p2.GetComponent<PlayerInfo>().landedShots,
-                                                                p2.GetComponent<PlayerInfo>().junkPercentage, p2.GetComponent<PlayerInfo>().healthyPercentage, p2.GetComponent<PlayerInfo>().GetDietPoints());
+
+        PlayerEndScreenStats p1stats = new PlayerEndScreenStats(p1Info.firedShots, p1Info.landedShots,
+                                                                p1Info.junkPercentage, p1Info.healthyPercentage, p1Info.GetDietPoints());
+        PlayerEndScreenStats p2stats = new PlayerEndScreenStats(p2Info.firedShots,p2Info.landedShots,
+                                                                p2Info.junkPercentage, p2Info.healthyPercentage, p2Info.GetDietPoints());
         SceneManager.LoadScene("EndGame");
 
         yield return new WaitForSeconds(1);
@@ -60,16 +63,21 @@ public class GameManager : MonoBehaviour {
         panelP1.Find("AimPercentage").GetComponent<Text>().text = "That's a hit percentage of " + p1stats.GetLandedShotPercentage().ToString() + "%";
         panelP1.Find("JunkPercentage").GetComponent<Text>().text = "Junk food: " + p1stats.JunkPercentage.ToString() + "%";
         panelP1.Find("HealthyPercentage").GetComponent<Text>().text = "Healthy food: " + p1stats.HealthyPercentage.ToString() + "%";
+        panelP1.Find("DietPoints").GetComponent<Text>().text = "Diet Points: " + p1stats.DietPoints.ToString();
 
         panelP2.Find("FiredShots").GetComponent<Text>().text = p2stats.FiredShots.ToString() + " fired shots";
         panelP2.Find("LandedShots").GetComponent<Text>().text = p2stats.LandedShots.ToString() + " landed shots";
         panelP2.Find("AimPercentage").GetComponent<Text>().text = "That's a hit percentage of " + p2stats.GetLandedShotPercentage().ToString() + "%";
         panelP2.Find("JunkPercentage").GetComponent<Text>().text = "Junk food: " + p2stats.JunkPercentage.ToString() + "%";
         panelP2.Find("HealthyPercentage").GetComponent<Text>().text = "Healthy food: "+p2stats.HealthyPercentage.ToString() + "%";
+        panelP2.Find("DietPoints").GetComponent<Text>().text = "Diet Points: " + p2stats.DietPoints.ToString();
+
+
 
         Text winnerText = GameObject.Find("WinnerText").GetComponent<Text>();
         int winner = DetermineWinner(p1stats, p2stats);
-            winnerText.text = "Player " + winner + " wins";
+        if (winner == 0) { winnerText.text = "DRAW"; }
+        else { winnerText.text = "Player " + winner + " wins"; }
         print(winnerText.text);
     }
 
@@ -87,8 +95,10 @@ public class GameManager : MonoBehaviour {
 
         //aim percentage
         if (p1stats.GetLandedShotPercentage() > p2stats.GetLandedShotPercentage());
+        print("p1 score: " + p1Score);
+        print("p2 score: " + p2Score);
 
-
+        if (p1Score == p2Score) { return 0; }
         return p1Score > p2Score ? 1 : 2;
     }
 }

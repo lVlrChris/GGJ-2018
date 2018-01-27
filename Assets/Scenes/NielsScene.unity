@@ -2291,7 +2291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c18d771837547c4bc007b2e988f349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameTime: 90
+  gameTime: 20
   GameTimer: {fileID: 455329024}
 --- !u!4 &1338181019
 Transform:
