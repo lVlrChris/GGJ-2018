@@ -53,7 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   JunkFood: {fileID: 4129656161741110, guid: 0b1e1c7a97b2646e4a32831a1e4f668c, type: 2}
   HealthyFood:
-  - {fileID: 0}
+  - {fileID: 4748627376112214, guid: 59782c6fee03847aaac5fce72271475a, type: 2}
   spawnPoints:
   - {fileID: 0}
   - {fileID: 0}
