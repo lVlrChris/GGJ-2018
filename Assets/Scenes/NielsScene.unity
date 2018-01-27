@@ -233,11 +233,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114245596254684050, guid: 8afdbb09fc9f16b4cb4833b99304c498,
-        type: 2}
-      propertyPath: diet
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 114374961458047610, guid: 8afdbb09fc9f16b4cb4833b99304c498,
         type: 2}
       propertyPath: foodSpawner

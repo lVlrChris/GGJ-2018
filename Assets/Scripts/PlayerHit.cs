@@ -26,8 +26,12 @@ public class PlayerHit : MonoBehaviour {
                 case Diet.Healthy:
                     playerLoot.LootedHealthyFood.Add(col.gameObject.gameObject.name);
                     break;
+<<<<<<< HEAD
                 case Diet.Snack:
                     playerLoot.LootedJunkFood.Add(col.gameObject.gameObject.name);
+=======
+                case Diet.JunkFood:
+>>>>>>> development
                     break;
             }
             Destroy(col.gameObject);
