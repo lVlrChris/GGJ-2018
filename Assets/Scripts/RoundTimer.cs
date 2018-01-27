@@ -32,19 +32,14 @@ public class RoundTimer : MonoBehaviour {
         if (gameTime < 7 && !startedEndTimer)
         {
             StartCoroutine(AnimateSeconds(5));
+            audioSource.Stop();
+            audioSource.clip = endMusic;
+            audioSource.Play();
             startedEndTimer = true;
         }
         if (gameTime < 1)
         {
 
-            if (gameTime <= 5 && !endMusicPlaying)
-            {
-                endMusicPlaying = true;
-                audioSource.Stop();
-                audioSource.clip = endMusic;
-                audioSource.Play();
-
-            }
             if (gameTime <= 0)
             {
                 print("end game");
