@@ -1,47 +1,56 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class FoodSpawner : MonoBehaviour {
     public Transform[] JunkFood;
     public Transform[] HealthyFood;
     public List<GameObject> spawnPoints = new List<GameObject>();
-    private List<GameObject> freeSpawnPoints; 
+    private List<GameObject> freeSpawnPoints;
+    public int maxFoodSpawns;
+    private int spawnedFood;
 
 
-
-    public GameObject[] JunkFoods;
-    public GameObject[] HealthyFoods;
+    public List<GameObject> JunkFoods = new List<GameObject>();
+    public List<GameObject> HealthyFoods = new List<GameObject>();
 
 	// Use this for initialization
 	void Start () {
-        freeSpawnPoints = new List<GameObject>(spawnPoints);
+        maxFoodSpawns = spawnPoints.Count - 1;
         SelectSpawnPoint();
 	}
 
     public void SelectSpawnPoint(){
-        int randomIndex = Random.Range(0, spawnPoints.Count);
-        //Debug.Log("INDEX" + randomIndex);
-        GameObject spawnPoint =  spawnPoints[randomIndex];
-   //     Debug.Log(CheckIfSpawnIsFree(spawnPoint));
-        /*
-        foreach (var spwnpnt in spawnPoints)
+        JunkFoods.RemoveAll(item => item == null); 
+        HealthyFoods.RemoveAll(item => item == null); 
+        while ((JunkFoods.Count + HealthyFoods.Count) < maxFoodSpawns)
         {
-            if (CheckIfSpawnIsFree(spwnpnt.transform.position))
+            int randomIndex = Random.Range(0, spawnPoints.Count);
+            //Debug.Log("INDEX" + randomIndex);
+            GameObject spawnPoint = spawnPoints[randomIndex];
+            //     Debug.Log(CheckIfSpawnIsFree(spawnPoint));
+            /*
+            foreach (var spwnpnt in spawnPoints)
             {
-                //Debug.Log("free: " + spwnpnt);
-                SpawnNewFood(spwnpnt);
-                return;
+                if (CheckIfSpawnIsFree(spwnpnt.transform.position))
+                {
+                    //Debug.Log("free: " + spwnpnt);
+                    SpawnNewFood(spwnpnt);
+                    return;
+                }
+                else {
+                    Debug.Log("not free");
+                }
+            }*/
+            if (CheckIfSpawnIsFree(spawnPoint.transform.position))
+            {
+                SpawnNewFood(spawnPoint);
             }
-            else {
-                Debug.Log("not free");
+            else
+            {
+                SelectSpawnPoint();
             }
-        }*/
-        if(CheckIfSpawnIsFree(spawnPoint.transform.position)) {
-            SpawnNewFood(spawnPoint);
-        }
-        else{
-            SelectSpawnPoint();
         }
  
     }
@@ -51,7 +60,7 @@ public class FoodSpawner : MonoBehaviour {
         int healthyIndex = Random.Range(0, HealthyFood.Length);
         int junkIndex = Random.Range(0, JunkFood.Length);
 
-        Transform food = (JunkFoods.Length > HealthyFoods.Length) ? HealthyFood[healthyIndex] : JunkFood[junkIndex];
+        Transform food = (JunkFoods.Count > HealthyFoods.Count) ? HealthyFood[healthyIndex] : JunkFood[junkIndex];
         Transform go = Instantiate(food, spawnPoint.transform.position, Quaternion.identity, spawnPoint.transform) as Transform;
         go.name = go.name.Split('(')[0];
         UpdateFoodLists();
@@ -61,20 +70,22 @@ public class FoodSpawner : MonoBehaviour {
         
         var spawnPointColliders = Physics.OverlapSphere(spawnPoint, 1);
         //Debug.Log("COLLLL" + spawnPointColliders.Length);
-        return !(spawnPointColliders.Length > 2);
+        return !(spawnPointColliders.Length > 1);
     }
 
 
     void UpdateFoodLists(){
-        JunkFoods = GameObject.FindGameObjectsWithTag("JunkFood");
-        HealthyFoods = GameObject.FindGameObjectsWithTag("HealthyFood");
+        JunkFoods = GameObject.FindGameObjectsWithTag("JunkFood").ToList();;
+        HealthyFoods = GameObject.FindGameObjectsWithTag("HealthyFood").ToList();
     }
 	
 	// Update is called once per frame
 	void Update () {
+        /*
         if (Input.GetKeyDown("space")){
             Debug.Log(spawnPoints.Count);
             SelectSpawnPoint();
         }
+        */
 	}
 }
