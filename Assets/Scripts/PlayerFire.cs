@@ -79,7 +79,6 @@ public class PlayerFire : MonoBehaviour {
                     {
                         case "Hotdog":
                             Instantiate(hotdog, spawnPoint.position, spawnPoint.transform.rotation);
-                            playerLoot.LootedJunkFood.RemoveAt(playerLoot.LootedJunkFood.Count - 1);
                             print("Fire HOTDOG!");
                             break;
                         case "Pizza":
@@ -89,6 +88,7 @@ public class PlayerFire : MonoBehaviour {
                             print("Fire DRUMSTICK!");
                             break;
                     }
+                    playerLoot.LootedJunkFood.RemoveAt(playerLoot.LootedJunkFood.Count - 1);
                     GetComponent<PlayerInfo>().firedShots++;
                     GetComponent<PlayerLoot>().JunkCount--;
                 }

@@ -39,8 +39,7 @@ public class FoodSpawner : MonoBehaviour {
         }
  
     }
-
-
+    
     void SpawnNewFood( GameObject spawnPoint){
         //nog random
         int healthyIndex = Random.Range(0, HealthyFood.Length);

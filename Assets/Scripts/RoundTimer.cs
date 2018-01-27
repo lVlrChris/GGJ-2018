@@ -19,7 +19,7 @@ public class RoundTimer : MonoBehaviour {
         GameTimer.text = Mathf.Round(gameTime).ToString();
         if(gameTime <= 0){
             print("end game");
-            //gameManager.EndGame();
+            gameManager.EndGame();
         }
 	}
 }

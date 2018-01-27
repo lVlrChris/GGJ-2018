@@ -16,7 +16,8 @@ public class PlayerInfo : MonoBehaviour {
     public float firedShots = 0f;
     public float landedShots = 0f;
 
-    public Text scoreText;
+    public Text junkText;
+    public Text healthText;
 
     public Transform UIPanel;
     private Slider healthySlider, junkSlider;
@@ -29,7 +30,8 @@ public class PlayerInfo : MonoBehaviour {
         UIPanel = GameObject.Find("PanelP" + playerIndex).transform;
         healthySlider = UIPanel.Find("HealthSlider").GetComponent<Slider>();
         junkSlider = UIPanel.transform.Find("JunkSlider").GetComponent<Slider>();
-        scoreText = UIPanel.transform.Find("Text").GetComponent<Text>();
+        junkText = UIPanel.transform.Find("JunkPercentage").GetComponent<Text>();
+        healthText = UIPanel.transform.Find("HealthPercentage").GetComponent<Text>();
     }
 
     void UpdatePercentage(){
@@ -37,7 +39,8 @@ public class PlayerInfo : MonoBehaviour {
         healthyPercentage =  playerLoot.HealthCount / (playerLoot.JunkCount + playerLoot.HealthCount) * 100;
         //Debug.Log("junk" + junkPercentage);
         //Debug.Log("health" + healthyPercentage);
-        scoreText.text = "Junk: " + junkPercentage + "% " + "Healthy: " + healthyPercentage + "%";
+        junkText.text = junkPercentage + "% ";
+        healthText.text = healthyPercentage + "%";
         healthySlider.value = (healthyPercentage / 100);
         junkSlider.value = junkPercentage / 100;
     }
