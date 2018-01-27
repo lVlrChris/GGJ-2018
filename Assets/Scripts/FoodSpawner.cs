@@ -17,6 +17,7 @@ public class FoodSpawner : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         //maxFoodSpawns = spawnPoints.Count - 1;
+        InvokeRepeating("SelectSpawnPoint", 0.0f, 4.0f);
         SelectSpawnPoint();
 	}
 

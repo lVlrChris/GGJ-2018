@@ -26,14 +26,14 @@ public class PlayerLoot : MonoBehaviour {
             JunkCount++;
             LootedJunkFood.Add(col.gameObject.name);
             Destroy(col.transform.parent.gameObject);
-            foodSpawner.SelectSpawnPoint();
+           // foodSpawner.SelectSpawnPoint();
         }           
         else if( collisionTag == "HealthyFood")
         {
             HealthCount++;
             LootedHealthyFood.Add(col.gameObject.name);
             Destroy(col.transform.parent.gameObject);
-            foodSpawner.SelectSpawnPoint();
+            //foodSpawner.SelectSpawnPoint();
 
         }
     }
