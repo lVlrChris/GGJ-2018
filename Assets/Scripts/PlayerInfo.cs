@@ -8,6 +8,7 @@ public class PlayerInfo : MonoBehaviour {
     public int playerIndex;
     public new string name;
     public Diet diet;
+    public float percentage;
 
 	// Use this for initialization
 	void Start () {
