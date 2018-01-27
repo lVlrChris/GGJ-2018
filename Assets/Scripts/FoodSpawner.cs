@@ -6,8 +6,6 @@ using System.Linq;
 public class FoodSpawner : MonoBehaviour {
     public Transform[] JunkFood;
     public Transform[] HealthyFood;
-    public List<GameObject> spawnPoints = new List<GameObject>();
-    private List<GameObject> freeSpawnPoints;
     public int maxFoodSpawns;
     private int spawnedFood;
 
@@ -59,13 +57,16 @@ public class FoodSpawner : MonoBehaviour {
     
     void SpawnNewFood(){
         //nog random
-        int healthyIndex = Random.Range(0, HealthyFood.Length);
-        int junkIndex = Random.Range(0, JunkFood.Length);
 
-        Transform food = (JunkFoods.Count > HealthyFoods.Count) ? HealthyFood[healthyIndex] : JunkFood[junkIndex];
 
-        if ((JunkFoods.Count + HealthyFoods.Count) < maxFoodSpawns)
+        while ((JunkFoods.Count + HealthyFoods.Count) < maxFoodSpawns)
         {
+            int healthyIndex = Random.Range(0, HealthyFood.Length);
+            int junkIndex = Random.Range(0, JunkFood.Length);
+
+            Transform food = (JunkFoods.Count > HealthyFoods.Count) ? HealthyFood[healthyIndex] : JunkFood[junkIndex];
+
+
             print(arena.GetComponent<Renderer>().bounds.center);
             Vector3 position = Random.insideUnitSphere * 7 + arena.GetComponent<Renderer>().bounds.center;
             position.y = 0;
@@ -101,7 +102,6 @@ public class FoodSpawner : MonoBehaviour {
 	void Update () {
         
         if (Input.GetKeyDown("space")){
-            Debug.Log(spawnPoints.Count);
             SelectSpawnPoint();
         }
 

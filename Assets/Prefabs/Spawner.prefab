@@ -60,7 +60,7 @@ MonoBehaviour:
   - {fileID: 4018163820322296, guid: e9b968141453a4d208065bc90fb84926, type: 2}
   - {fileID: 4493760413669036, guid: 89c101404eede7c4395474040cf5da2f, type: 2}
   spawnPoints: []
-  maxFoodSpawns: 20
+  maxFoodSpawns: 8
   arena: {fileID: 0}
   JunkFoods: []
   HealthyFoods: []
