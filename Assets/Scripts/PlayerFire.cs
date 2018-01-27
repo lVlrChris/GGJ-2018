@@ -107,7 +107,7 @@ public class PlayerFire : MonoBehaviour {
                             Instantiate(pizza, spawnPoint.position, spawnPoint.transform.rotation);
                             print("Fire PIZZA!");
                             break;
-                        case "Drumstick":
+                        case "DrumStick":
                             Instantiate(drumstick, spawnPoint.position, spawnPoint.transform.rotation);
 
                             print("Fire DRUMSTICK!");

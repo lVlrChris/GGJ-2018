@@ -33,6 +33,7 @@ public class SceneLoader : MonoBehaviour
     {
         Debug.Log("Loading " + menuSceneName + "...");
         SceneManager.LoadScene(menuSceneName);
+        Destroy(gameObject);
     }
 
     public void QuitGame()
