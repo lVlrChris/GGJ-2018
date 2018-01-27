@@ -10,7 +10,7 @@ public class PlayerLoot : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-       // foodSpawner = gameObject.GetComponent(typeof(FoodSpawner)) as FoodSpawner;
+       //foodSpawner = gameObject.GetComponent(typeof(FoodSpawner)) as FoodSpawner;
 	}
 	
 	// Update is called once per frame

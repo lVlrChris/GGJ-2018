@@ -398,6 +398,7 @@ MonoBehaviour:
   HealthCount: 0
   LootedJunkFood: []
   LootedHealthyFood: []
+  foodSpawner: {fileID: 1871553570}
 --- !u!1001 &1457803430
 Prefab:
   m_ObjectHideFlags: 0
