@@ -6,15 +6,25 @@ public class PlayerMovement : MonoBehaviour {
 
     public float moveSpeed;
     private PlayerInfo playerInfo;
+    private Animator animator;
 
 	void Start () {
         playerInfo = GetComponent<PlayerInfo>();
+        animator = transform.GetChild(0).GetComponent<Animator>();
 	}
 	
 	void Update ()
     {
         float moveX = Input.GetAxis("HorizontalP"+playerInfo.playerIndex);
         float moveZ = Input.GetAxis("VerticalP"+playerInfo.playerIndex);
-        transform.Translate(moveX * moveSpeed * Time.deltaTime, 0, moveZ * moveSpeed * Time.deltaTime, Space.World);
+        if(moveX != 0 || moveZ != 0)
+        {
+            animator.SetBool("Running", true);
+            transform.Translate(moveX * moveSpeed * Time.deltaTime, 0, moveZ * moveSpeed * Time.deltaTime, Space.World);
+        }else
+        {
+            animator.SetBool("Running", false);
+        }
+
 	}
 }

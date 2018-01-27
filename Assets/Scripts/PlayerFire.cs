@@ -61,6 +61,7 @@ public class PlayerFire : MonoBehaviour {
                             Instantiate(apple, spawnPoint.position, spawnPoint.transform.rotation);
                             break;
                         case "Grapes":
+                            Instantiate(grapes, spawnPoint.position, spawnPoint.transform.rotation);
                             print("Fire GRAPES!");
                             break;
                     }

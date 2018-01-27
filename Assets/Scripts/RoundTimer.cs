@@ -7,9 +7,10 @@ public class RoundTimer : MonoBehaviour {
     public float gameTime = 30f;
     
     public Text GameTimer;
+    private GameManager gameManager;
 	// Use this for initialization
 	void Start () {
-		
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 	}
 	
 	// Update is called once per frame
@@ -17,7 +18,8 @@ public class RoundTimer : MonoBehaviour {
         gameTime -= Time.deltaTime;
         GameTimer.text = Mathf.Round(gameTime).ToString();
         if(gameTime <= 0){
-            GameTimer.text = "KLAAAAAR";
+            print("end game");
+            //gameManager.EndGame();
         }
 	}
 }

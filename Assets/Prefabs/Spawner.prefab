@@ -56,6 +56,7 @@ MonoBehaviour:
   HealthyFood:
   - {fileID: 4748627376112214, guid: 59782c6fee03847aaac5fce72271475a, type: 2}
   - {fileID: 4018163820322296, guid: e9b968141453a4d208065bc90fb84926, type: 2}
+  - {fileID: 4493760413669036, guid: 89c101404eede7c4395474040cf5da2f, type: 2}
   spawnPoints:
   - {fileID: 0}
   - {fileID: 0}

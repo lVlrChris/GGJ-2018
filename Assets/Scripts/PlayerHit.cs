@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PlayerHit : MonoBehaviour {
@@ -30,6 +31,8 @@ public class PlayerHit : MonoBehaviour {
                     playerLoot.HealthCount++;
                     break;
             }
+            GameObject otherPlayer = GameObject.FindGameObjectsWithTag("Player").First(go => go.GetComponent<PlayerInfo>().playerIndex != GetComponent<PlayerInfo>().playerIndex);
+            otherPlayer.GetComponent<PlayerInfo>().landedShots++;
             Debug.Log(gameObject.name + " collided with " + col.gameObject.name);
             Destroy(col.gameObject);
         }
