@@ -360,6 +360,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd5fa72ebd2b7874c8f07b9dd26271b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fastFoodPlayer: {fileID: 1650582145878492, guid: 6fb1fb3d8d2a7b940ba192bf2b8fdd7f,
+    type: 2}
+  healthyPlayer: {fileID: 1992004000056174, guid: 22869ee9152e7eb4da6908733ad1d959,
+    type: 2}
+  spawnPosP1: {fileID: 0}
+  spawnPosP2: {fileID: 0}
 --- !u!4 &1327719655
 Transform:
   m_ObjectHideFlags: 0

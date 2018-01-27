@@ -72,6 +72,7 @@ GameObject:
   - component: {fileID: 114205580988277038}
   - component: {fileID: 114665286162973542}
   - component: {fileID: 114232866247793968}
+  - component: {fileID: 114104227937308746}
   m_Layer: 0
   m_Name: HealthyPlayer
   m_TagString: Untagged
@@ -202,6 +203,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5021191, y: 1, z: 1.5592377}
   m_Center: {x: 0.012957573, y: 0.37402713, z: -0.043005943}
+--- !u!114 &114104227937308746
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1992004000056174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20d5cd4f56f2a4540bbad79ae42737eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLoot: {fileID: 0}
+  playerInfo: {fileID: 0}
 --- !u!114 &114205580988277038
 MonoBehaviour:
   m_ObjectHideFlags: 1

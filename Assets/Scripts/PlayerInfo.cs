@@ -35,8 +35,8 @@ public class PlayerInfo : MonoBehaviour {
     void UpdatePercentage(){
         junkPercentage = playerLoot.JunkCount / (playerLoot.JunkCount + playerLoot.HealthCount) * 100;
         healthyPercentage =  playerLoot.HealthCount / (playerLoot.JunkCount + playerLoot.HealthCount) * 100;
-        Debug.Log("junk" + junkPercentage);
-        Debug.Log("health" + healthyPercentage);
+        //Debug.Log("junk" + junkPercentage);
+        //Debug.Log("health" + healthyPercentage);
         scoreText.text = "Junk: " + junkPercentage + "% " + "Healthy: " + healthyPercentage + "%";
         healthySlider.value = (healthyPercentage / 100);
         junkSlider.value = junkPercentage / 100;

@@ -18,18 +18,19 @@ public class PlayerHit : MonoBehaviour {
 	}
     void OnCollisionEnter(Collision col)
     {
-        Debug.Log(col.gameObject.tag);
-
         if (col.gameObject.tag == "Projectile")
         {
             switch(playerInfo.diet){
                 case Diet.Healthy:
-                    playerLoot.LootedHealthyFood.Add(col.gameObject.gameObject.name);
+                    playerLoot.LootedJunkFood.Add(col.gameObject.gameObject.name);
+                    playerLoot.JunkCount++;
                     break;
                 case Diet.JunkFood:
-                    playerLoot.LootedJunkFood.Add(col.gameObject.gameObject.name);
+                    playerLoot.LootedHealthyFood.Add(col.gameObject.gameObject.name);
+                    playerLoot.HealthCount++;
                     break;
             }
+            Debug.Log(gameObject.name + " collided with " + col.gameObject.name);
             Destroy(col.gameObject);
         }
     }

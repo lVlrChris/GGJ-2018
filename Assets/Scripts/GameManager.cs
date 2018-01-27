@@ -13,17 +13,20 @@ public class GameManager : MonoBehaviour {
 
     void Start () {
         DontDestroyOnLoad(gameObject);
-	}
+    }
 	
 	
     public void StartGame()
     {
         SceneManager.LoadScene("NielsScene");
-        SpawnPlayers();
+        StartCoroutine(SpawnPlayers());
     }
 
-    private void SpawnPlayers()
+    private IEnumerator SpawnPlayers()
     {
+        yield return new WaitForSeconds(2);
+        spawnPosP1 = GameObject.Find("SpawnPosP1").transform;
+        spawnPosP2 = GameObject.Find("SpawnPosP2").transform;
         GameObject p1 = Instantiate(fastFoodPlayer, spawnPosP1.position, spawnPosP1.rotation) as GameObject;
         p1.GetComponent<PlayerInfo>().playerIndex = 1;
         GameObject p2 = Instantiate(healthyPlayer, spawnPosP2.position, spawnPosP2.rotation) as GameObject;

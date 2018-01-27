@@ -21,7 +21,6 @@ public class PlayerLoot : MonoBehaviour {
     void OnCollisionEnter(Collision col)
     {
         var collisionTag = col.gameObject.tag;
-        Debug.Log(collisionTag);
 
         if (collisionTag == "JunkFood"){
             JunkCount++;
