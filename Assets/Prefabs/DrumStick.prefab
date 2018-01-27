@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33912396055656232}
   - component: {fileID: 23413807421732290}
   - component: {fileID: 95067788427137940}
+  - component: {fileID: 65352806207823606}
   m_Layer: 0
-  m_Name: DrumStick
-  m_TagString: Untagged
+  m_Name: Drumstick
+  m_TagString: JunkFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +84,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1562678938131216}
   m_Mesh: {fileID: 4300000, guid: 87d74f60661c76d4ab79ba2ecddd63fe, type: 3}
+--- !u!65 &65352806207823606
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1562678938131216}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2, y: 1.2, z: 2.4496872}
+  m_Center: {x: 0, y: 0, z: 0.6248436}
 --- !u!95 &95067788427137940
 Animator:
   serializedVersion: 3
@@ -92,7 +105,7 @@ Animator:
   m_GameObject: {fileID: 1562678938131216}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 87d74f60661c76d4ab79ba2ecddd63fe, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d34a3694938440141941cb742b3de811, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

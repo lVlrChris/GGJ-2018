@@ -54,6 +54,7 @@ MonoBehaviour:
   JunkFood:
   - {fileID: 4138670260827658, guid: d8391bc78ad7e49c2a5e78d2eee9efe2, type: 2}
   - {fileID: 4813364876592774, guid: 0b1e1c7a97b2646e4a32831a1e4f668c, type: 2}
+  - {fileID: 4426782793804796, guid: 3ef4ab0f3c1d02048ba19db4f4ce839a, type: 2}
   HealthyFood:
   - {fileID: 4748627376112214, guid: 59782c6fee03847aaac5fce72271475a, type: 2}
   - {fileID: 4018163820322296, guid: e9b968141453a4d208065bc90fb84926, type: 2}
