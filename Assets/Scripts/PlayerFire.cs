@@ -54,16 +54,17 @@ public class PlayerFire : MonoBehaviour {
                     {
                         case "Banana":
                             print("Fire BANANA!");
+                            Instantiate(banana, spawnPoint.position, spawnPoint.transform.rotation);
                             break;
                         case "Apple":
                             print("Fire APPLE!");
                             Instantiate(apple, spawnPoint.position, spawnPoint.transform.rotation);
-                            playerLoot.LootedHealthyFood.RemoveAt(playerLoot.LootedHealthyFood.Count - 1);
                             break;
                         case "Grapes":
                             print("Fire GRAPES!");
                             break;
                     }
+                    playerLoot.LootedHealthyFood.RemoveAt(playerLoot.LootedHealthyFood.Count - 1);
                     GetComponent<PlayerInfo>().firedShots++;
                     GetComponent<PlayerLoot>().HealthCount--;
                 }else{

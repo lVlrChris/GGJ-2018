@@ -128,7 +128,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1127161368331188}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.198, z: 1.038}
+  m_LocalPosition: {x: 0, y: 0.198, z: 1.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4301727989899710}
@@ -241,7 +241,7 @@ MonoBehaviour:
   drumstick: {fileID: 0}
   apple: {fileID: 1450496704012756, guid: 07ac0c508689d3d4da50128f759b7be5, type: 2}
   grapes: {fileID: 0}
-  banana: {fileID: 0}
+  banana: {fileID: 1774271316708424, guid: 9291027d091833648bb4e015d5965b77, type: 2}
   spawnPoint: {fileID: 4647162278590724}
 --- !u!114 &114269556862697078
 MonoBehaviour:

@@ -51,9 +51,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f886ef8ad16440cba5f8fdd4e2dd0e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JunkFood: {fileID: 4129656161741110, guid: 0b1e1c7a97b2646e4a32831a1e4f668c, type: 2}
+  JunkFood:
+  - {fileID: 4129656161741110, guid: 0b1e1c7a97b2646e4a32831a1e4f668c, type: 2}
   HealthyFood:
   - {fileID: 4748627376112214, guid: 59782c6fee03847aaac5fce72271475a, type: 2}
+  - {fileID: 4174425892704680, guid: e9b968141453a4d208065bc90fb84926, type: 2}
   spawnPoints:
   - {fileID: 0}
   - {fileID: 0}

@@ -37,8 +37,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4748627376112214}
   - component: {fileID: 65428805575631510}
+  - component: {fileID: 114173137291324726}
   m_Layer: 0
-  m_Name: Banana 1
+  m_Name: BananaProjectile
   m_TagString: HealthyFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -122,5 +123,17 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.41, y: -0.53, z: 1.31}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.30345002, y: 0.53, z: 0.97641176}
+  m_Center: {x: 0.017539755, y: 0, z: -0.020376593}
+--- !u!114 &114173137291324726
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1774271316708424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4afde0bfa21794d8d4b27ffa04b4ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 3
