@@ -64,6 +64,7 @@ public class PlayerFire : MonoBehaviour {
                             print("Fire GRAPES!");
                             break;
                     }
+                    GetComponent<PlayerInfo>().firedShots++;
                     GetComponent<PlayerLoot>().HealthCount--;
                 }else{
                     print("You dont have any healthy");
@@ -86,6 +87,7 @@ public class PlayerFire : MonoBehaviour {
                             print("Fire DRUMSTICK!");
                             break;
                     }
+                    GetComponent<PlayerInfo>().firedShots++;
                     GetComponent<PlayerLoot>().JunkCount--;
                 }
                 else

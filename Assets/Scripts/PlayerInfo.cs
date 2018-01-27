@@ -11,6 +11,11 @@ public class PlayerInfo : MonoBehaviour {
     public float junkPercentage = 0f;
     public float healthyPercentage = 0f;
 
+    //used for end of match stats
+    public float aimPercentage = 0f;
+    public float firedShots = 0f;
+    public float landedShots = 0f;
+
     public Text scoreText;
     public Slider healthySlider, junkSlider;
 
