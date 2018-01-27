@@ -217,5 +217,5 @@ MonoBehaviour:
   audioSource: {fileID: 82307260359654778}
   mainMusic: {fileID: 8300000, guid: b0212c3dc661943469d4528b6e77c541, type: 3}
   endMusic: {fileID: 8300000, guid: 1ccf1bac677eb419ea3858ed4fd18b8b, type: 3}
-  recordSkip: {fileID: 8300000, guid: 46c6f1e50f5d24744811f40665a50e84, type: 3}
-  GameTimer: {fileID: 0}
+  gameTimer: {fileID: 0}
+  countdownText: {fileID: 0}

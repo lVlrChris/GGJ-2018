@@ -37,6 +37,12 @@ public class GameManager : MonoBehaviour {
         p2.GetComponent<PlayerInfo>().playerIndex = 2;
     }
 
+    public void UnlockPlayerMovements()
+    {
+        p1.GetComponent<PlayerMovement>().canMove = true;
+        p2.GetComponent<PlayerMovement>().canMove = true;
+    }
+
     public void EndGame()
     {
         StartCoroutine(EndTheGame());

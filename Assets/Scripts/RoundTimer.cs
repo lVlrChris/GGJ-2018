@@ -13,48 +13,69 @@ public class RoundTimer : MonoBehaviour {
     public AudioClip endMusic;
 
     bool endMusicPlaying = false;
-
-    public Text GameTimer;
+    bool countingDown = true;
+    public Text gameTimer;
+    public Text countdownText;
     private GameManager gameManager;
 	// Use this for initialization
 	void Start () {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         audioSource.Play();
+
+        StartCoroutine(Countdown(3));
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        gameTime -= Time.deltaTime;
-        int min = Mathf.FloorToInt(gameTime / 60);
-        int sec = Mathf.FloorToInt(gameTime % 60);
-        GameTimer.text = min.ToString("00") + ":" + sec.ToString("00");
-
-        if (gameTime < 7 && !startedEndTimer)
+        if (!countingDown)
         {
-            StartCoroutine(AnimateSeconds(5));
-            audioSource.Stop();
-            audioSource.clip = endMusic;
-            audioSource.Play();
-            startedEndTimer = true;
-        }
-        if (gameTime < 1)
-        {
+            gameTime -= Time.deltaTime;
+            int min = Mathf.FloorToInt(gameTime / 60);
+            int sec = Mathf.FloorToInt(gameTime % 60);
+            gameTimer.text = min.ToString("00") + ":" + sec.ToString("00");
 
-            if (gameTime <= 0)
+            if (gameTime < 7 && !startedEndTimer)
             {
-                print("end game");
-                gameManager.EndGame();
+                StartCoroutine(AnimateSeconds(5));
+                audioSource.Stop();
+                audioSource.clip = endMusic;
+                audioSource.Play();
+                startedEndTimer = true;
+            }
+            if (gameTime < 1)
+            {
+                if (gameTime <= 0)
+                {
+                    print("end game");
+                    gameManager.EndGame();
+                }
             }
         }
 	}
 
+    IEnumerator Countdown(int n)
+    {
+        if (n > 0)
+        {
+            countdownText.text = n.ToString();
+            yield return new WaitForSeconds(1f);
+            StartCoroutine(Countdown(n - 1));
+        }else
+        {
+            countdownText.text = "FIGHT!";
+            gameManager.UnlockPlayerMovements();
+            yield return new WaitForSeconds(1f);
+            Destroy(countdownText.gameObject);
+            countingDown = false;
+        }
+    }
     IEnumerator AnimateSeconds(int n)
     {
-        GameTimer.gameObject.GetComponent<Animator>().SetBool("Blink", true);
+        gameTimer.gameObject.GetComponent<Animator>().SetBool("Blink", true);
         if (n > 0)
         {
             yield return new WaitForSeconds(1f);
-            GameTimer.gameObject.GetComponent<Animator>().SetBool("Blink", false);
+            gameTimer.gameObject.GetComponent<Animator>().SetBool("Blink", false);
             StartCoroutine(AnimateSeconds(n - 1));
         }
     }
