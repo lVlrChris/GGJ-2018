@@ -824,7 +824,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1327719654}
+      - m_Target: {fileID: 1327719656}
         m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:

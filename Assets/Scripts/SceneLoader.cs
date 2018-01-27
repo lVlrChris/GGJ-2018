@@ -8,10 +8,12 @@ public class SceneLoader : MonoBehaviour
     public string gamesceneName;
     public string menuSceneName;
 
+    private GameManager gameManager;
+
     // Use this for initialization
     void Start()
     {
-
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -23,7 +25,8 @@ public class SceneLoader : MonoBehaviour
     public void StartGame()
     {
         Debug.Log("Loading " + gamesceneName + "...");
-        SceneManager.LoadScene(gamesceneName);
+        //SceneManager.LoadScene(gamesceneName);
+        gameManager.StartGame(gamesceneName);
     }
 
     public void MainMenu()
