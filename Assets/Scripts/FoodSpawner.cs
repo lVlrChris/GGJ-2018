@@ -66,6 +66,7 @@ public class FoodSpawner : MonoBehaviour {
 
         if ((JunkFoods.Count + HealthyFoods.Count) < maxFoodSpawns)
         {
+            print(arena.GetComponent<Renderer>().bounds.center);
             Vector3 position = Random.insideUnitSphere * 7 + arena.GetComponent<Renderer>().bounds.center;
             position.y = 0;
 
