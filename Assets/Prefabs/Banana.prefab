@@ -37,7 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4748627376112214}
   - component: {fileID: 65428805575631510}
-  - component: {fileID: 95044961886326782}
+  - component: {fileID: 95784324889351152}
   m_Layer: 0
   m_Name: Banana
   m_TagString: HealthyFood
@@ -65,7 +65,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1774271316708424}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.69, y: 0, z: -7.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4442671552989258}
@@ -125,7 +125,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.41, y: -0.53, z: 1.31}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &95044961886326782
+--- !u!95 &95784324889351152
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -134,7 +134,7 @@ Animator:
   m_GameObject: {fileID: 1774271316708424}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0f449794b95ff0442891e2b79f63b379, type: 2}
+  m_Controller: {fileID: 9100000, guid: 32723c980fecd484590d05e66240f8b9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
