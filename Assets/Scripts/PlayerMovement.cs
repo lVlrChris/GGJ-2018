@@ -15,6 +15,6 @@ public class PlayerMovement : MonoBehaviour {
     {
         float moveX = Input.GetAxis("HorizontalP"+playerInfo.playerIndex);
         float moveZ = Input.GetAxis("VerticalP"+playerInfo.playerIndex);
-        transform.Translate(moveX * moveSpeed * Time.deltaTime, 0, moveZ * moveSpeed * Time.deltaTime);
+        transform.Translate(moveX * moveSpeed * Time.deltaTime, 0, moveZ * moveSpeed * Time.deltaTime, Space.World);
 	}
 }
