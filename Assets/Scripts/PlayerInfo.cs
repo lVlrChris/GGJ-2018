@@ -23,7 +23,7 @@ public class PlayerInfo : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        playerLoot = GetComponent<PlayerLoot>();
+      //  playerLoot = GetComponent<PlayerLoot>();
 	}
 
     void UpdatePercentage(){
