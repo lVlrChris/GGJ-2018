@@ -239,7 +239,7 @@ MonoBehaviour:
   hotdog: {fileID: 1954517187081148, guid: 506ff9c93f3ef0d4080bd5af388c6a0c, type: 2}
   pizza: {fileID: 0}
   drumstick: {fileID: 0}
-  apple: {fileID: 1450496704012756, guid: 07ac0c508689d3d4da50128f759b7be5, type: 2}
+  apple: {fileID: 1890885277596958, guid: 8123e618bef6ab04b90515700ef0f95e, type: 2}
   grapes: {fileID: 0}
   banana: {fileID: 1774271316708424, guid: 9291027d091833648bb4e015d5965b77, type: 2}
   spawnPoint: {fileID: 4647162278590724}
