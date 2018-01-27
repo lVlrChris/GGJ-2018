@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class RoundTimer : MonoBehaviour {
-    public float gameTime = 30f;
+    public float gameTime = 90f;
     
     public Text GameTimer;
     private GameManager gameManager;
@@ -16,8 +16,10 @@ public class RoundTimer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         gameTime -= Time.deltaTime;
-        GameTimer.text = Mathf.Round(gameTime).ToString();
-        if(gameTime <= 0){
+        int min = Mathf.FloorToInt(gameTime / 60);
+        int sec = Mathf.FloorToInt(gameTime % 60);
+        GameTimer.text = min.ToString("00") + ":" + sec.ToString("00");
+        if (gameTime <= 0){
             print("end game");
             gameManager.EndGame();
         }

@@ -59,14 +59,14 @@ public class GameManager : MonoBehaviour {
         panelP1.Find("FiredShots").GetComponent<Text>().text = p1stats.FiredShots.ToString() + " fired shots";
         panelP1.Find("LandedShots").GetComponent<Text>().text = p1stats.LandedShots.ToString() + " landed shots";
         panelP1.Find("AimPercentage").GetComponent<Text>().text = "That's a hit percentage of " + ((p1stats.LandedShots / p1stats.FiredShots) * 100).ToString() + "%";
-        panelP1.Find("JunkPercentage").GetComponent<Text>().text = p1stats.JunkPercentage.ToString() + "%";
-        panelP1.Find("HealthyPercentage").GetComponent<Text>().text = p1stats.HealthyPercentage.ToString() + "%";
+        panelP1.Find("JunkPercentage").GetComponent<Text>().text = "Junk food: " + p1stats.JunkPercentage.ToString() + "%";
+        panelP1.Find("HealthyPercentage").GetComponent<Text>().text = "Healthy food: " + p1stats.HealthyPercentage.ToString() + "%";
 
         panelP2.Find("FiredShots").GetComponent<Text>().text = p2stats.FiredShots.ToString() + " fired shots";
         panelP2.Find("LandedShots").GetComponent<Text>().text = p2stats.LandedShots.ToString() + " landed shots";
         panelP2.Find("AimPercentage").GetComponent<Text>().text = "That's a hit percentage of " + ((p2stats.LandedShots / p2stats.FiredShots) * 100).ToString() + "%";
-        panelP2.Find("JunkPercentage").GetComponent<Text>().text = p2stats.JunkPercentage.ToString() + "%";
-        panelP2.Find("HealthyPercentage").GetComponent<Text>().text = p2stats.HealthyPercentage.ToString() + "%";
+        panelP2.Find("JunkPercentage").GetComponent<Text>().text = "Junk food: " + p2stats.JunkPercentage.ToString() + "%";
+        panelP2.Find("HealthyPercentage").GetComponent<Text>().text = "Healthy food: "+p2stats.HealthyPercentage.ToString() + "%";
 
 
     }
