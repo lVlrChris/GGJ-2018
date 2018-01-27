@@ -31,6 +31,7 @@ public class PlayerHit : MonoBehaviour {
                     playerLoot.HealthCount++;
                     break;
             }
+            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShake>().ShakeCamera();
             GetComponent<Rigidbody>().AddForce((transform.position - col.transform.position).normalized * 15, ForceMode.Impulse);
             GameObject otherPlayer = GameObject.FindGameObjectsWithTag("Player").First(go => go.GetComponent<PlayerInfo>().playerIndex != GetComponent<PlayerInfo>().playerIndex);
             otherPlayer.GetComponent<PlayerInfo>().landedShots++;
