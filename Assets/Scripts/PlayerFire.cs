@@ -62,11 +62,12 @@ public class PlayerFire : MonoBehaviour {
                             print("Fire GRAPES!");
                             break;
                     }
+                    GetComponent<PlayerLoot>().HealthCount--;
                 }else{
                     print("You dont have any healthy");
                 }
                 break;
-            case Diet.Snack:
+            case Diet.JunkFood:
                 if (playerLoot.LootedJunkFood.Count > 0)
                 {
                     switch (playerLoot.LootedJunkFood[playerLoot.LootedJunkFood.Count - 1])
@@ -83,6 +84,7 @@ public class PlayerFire : MonoBehaviour {
                             print("Fire DRUMSTICK!");
                             break;
                     }
+                    GetComponent<PlayerLoot>().JunkCount--;
                 }
                 else
                 {

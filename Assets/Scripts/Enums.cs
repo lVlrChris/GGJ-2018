@@ -2,7 +2,7 @@
 public enum Diet
 {
     Healthy,
-    Snack
+    JunkFood
 }
 
 public enum Healthy

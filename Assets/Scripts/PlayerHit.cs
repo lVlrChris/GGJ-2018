@@ -24,7 +24,7 @@ public class PlayerHit : MonoBehaviour {
             switch(playerInfo.diet){
                 case Diet.Healthy:
                     break;
-                case Diet.Snack:
+                case Diet.JunkFood:
                     break;
             }
         }

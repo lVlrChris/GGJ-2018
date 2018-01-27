@@ -242,7 +242,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerIndex: 1
   name: Potje
-  diet: 0
+  diet: 1
+  percentage: 0
 --- !u!114 &114300981485165760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -276,10 +277,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   JunkCount: 0
   HealthCount: 0
-  LootedJunkFood:
-  - Hotdog
-  LootedHealthyFood:
-  - Apple
+  LootedJunkFood: []
+  LootedHealthyFood: []
+  foodSpawner: {fileID: 0}
 --- !u!136 &136129988345951698
 CapsuleCollider:
   m_ObjectHideFlags: 1
