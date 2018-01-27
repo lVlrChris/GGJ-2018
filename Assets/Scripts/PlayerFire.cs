@@ -15,6 +15,7 @@ public class PlayerFire : MonoBehaviour {
     public GameObject apple;
     public GameObject grapes;
     public GameObject banana;
+    public GameObject nope;
 
     public Transform spawnPoint;
 
@@ -87,7 +88,9 @@ public class PlayerFire : MonoBehaviour {
                     playerLoot.LootedHealthyFood.RemoveAt(playerLoot.LootedHealthyFood.Count - 1);
                     GetComponent<PlayerInfo>().firedShots++;
                     GetComponent<PlayerLoot>().HealthCount--;
-                }else{
+                }else
+                {
+                    Instantiate(nope, spawnPoint.transform.position, spawnPoint.transform.rotation, transform);
                     print("You dont have any healthy");
                 }
                 break;
@@ -116,6 +119,7 @@ public class PlayerFire : MonoBehaviour {
                 }
                 else
                 {
+                    Instantiate(nope, spawnPoint.transform.position, spawnPoint.transform.rotation, transform);
                     print("You dont have any snacks");
                 }
                 break;
