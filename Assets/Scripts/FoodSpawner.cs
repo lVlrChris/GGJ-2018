@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FoodSpawner : MonoBehaviour {
-    public Transform JunkFood;
+    public Transform[] JunkFood;
     public Transform[] HealthyFood;
     public List<GameObject> spawnPoints = new List<GameObject>();
     private List<GameObject> freeSpawnPoints; 
@@ -43,7 +43,10 @@ public class FoodSpawner : MonoBehaviour {
 
     void SpawnNewFood( GameObject spawnPoint){
         //nog random
-        Transform food = (JunkFoods.Length > HealthyFoods.Length) ? HealthyFood[0] : JunkFood;
+        int healthyIndex = Random.Range(0, HealthyFood.Length);
+        int junkIndex = Random.Range(0, JunkFood.Length);
+
+        Transform food = (JunkFoods.Length > HealthyFoods.Length) ? HealthyFood[healthyIndex] : JunkFood[junkIndex];
         Transform go = Instantiate(food, spawnPoint.transform.position, Quaternion.identity) as Transform;
         go.name = go.name.Split('(')[0];
         UpdateFoodLists();
