@@ -2779,7 +2779,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 3
+  m_Text: 
 --- !u!222 &705936641
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3590,6 +3590,11 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114667790726298418, guid: 95153e0eb4aabb145babc3d08aae718f,
+        type: 2}
+      propertyPath: m_Text
+      value: Starting game..
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95153e0eb4aabb145babc3d08aae718f, type: 2}
   m_IsPrefabParent: 0
@@ -3980,6 +3985,11 @@ Prefab:
       propertyPath: countdownText
       value: 
       objectReference: {fileID: 705936640}
+    - target: {fileID: 114621763918322322, guid: 085f1a26632aea64b8ebbec5759b66e2,
+        type: 2}
+      propertyPath: gameIntro
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 085f1a26632aea64b8ebbec5759b66e2, type: 2}
   m_IsPrefabParent: 0

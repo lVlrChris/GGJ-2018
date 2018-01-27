@@ -16,13 +16,15 @@ public class RoundTimer : MonoBehaviour {
     bool countingDown = true;
     public Text gameTimer;
     public Text countdownText;
+    public RectTransform gameIntro;
     private GameManager gameManager;
 	// Use this for initialization
 	void Start () {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         audioSource.Play();
 
-        StartCoroutine(Countdown(3));
+
+        StartCoroutine(WaitForIntroAndCount());
 	}
 	
 	// Update is called once per frame
@@ -52,6 +54,13 @@ public class RoundTimer : MonoBehaviour {
             }
         }
 	}
+
+    IEnumerator WaitForIntroAndCount()
+    {
+        yield return new WaitForSeconds(5f);
+        Destroy(gameIntro.gameObject);
+        StartCoroutine(Countdown(3));
+    }
 
     IEnumerator Countdown(int n)
     {
