@@ -488,7 +488,8 @@ MonoBehaviour:
   aimPercentage: 0
   firedShots: 0
   landedShots: 0
-  scoreText: {fileID: 0}
+  junkText: {fileID: 0}
+  healthText: {fileID: 0}
   UIPanel: {fileID: 0}
 --- !u!114 &114465391511299548
 MonoBehaviour:
@@ -545,7 +546,7 @@ MonoBehaviour:
   canShoot: 1
   fireCooldown: 3
   hotdog: {fileID: 1954517187081148, guid: 506ff9c93f3ef0d4080bd5af388c6a0c, type: 2}
-  pizza: {fileID: 0}
+  pizza: {fileID: 1191091508416998, guid: 55846e5691a1c4a108b7e6d06c0c5364, type: 2}
   drumstick: {fileID: 0}
   apple: {fileID: 1890885277596958, guid: 8123e618bef6ab04b90515700ef0f95e, type: 2}
   grapes: {fileID: 1709238735215474, guid: 835930cd4f328b1458fb250de5037591, type: 2}

@@ -366,6 +366,8 @@ MonoBehaviour:
     type: 2}
   spawnPosP1: {fileID: 0}
   spawnPosP2: {fileID: 0}
+  p1: {fileID: 0}
+  p2: {fileID: 0}
 --- !u!4 &1327719655
 Transform:
   m_ObjectHideFlags: 0

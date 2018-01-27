@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour {
         int p1Score = 0;
         int p2Score = 0;
 
-        //diet percentage
+        //diet percentage HIER NOG DRAW
         if (p1stats.LandedShots > p2stats.LandedShots) { p1Score++; } else { p2Score++; }
 
         //diet points (percentage goed eten)
