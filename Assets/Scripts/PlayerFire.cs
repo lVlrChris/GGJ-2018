@@ -24,22 +24,41 @@ public class PlayerFire : MonoBehaviour {
 	}
 	
 	void Update () {
-
-        float rotX = Input.GetAxis("RotXP" + playerInfo.playerIndex);
-        float rotY = Input.GetAxis("RotYP" + playerInfo.playerIndex);
-
-        float heading = Mathf.Atan2(rotX, rotY);
-        if((rotX != 0) || rotY != 0)
+        
+        if(Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WindowsEditor)
         {
-            transform.rotation = Quaternion.Euler(0, heading * Mathf.Rad2Deg * -1,0);
-            
-        }
+            float rotX = Input.GetAxis("RotXP" + playerInfo.playerIndex);
+            float rotY = Input.GetAxis("RotYP" + playerInfo.playerIndex);
 
-        if (Input.GetAxisRaw("FireP"+playerInfo.playerIndex) > 0 && canShoot)
+            float heading = Mathf.Atan2(rotX, rotY);
+            if ((rotX != 0) || rotY != 0)
+            {
+                transform.rotation = Quaternion.Euler(0, heading * Mathf.Rad2Deg * -1, 0);
+
+            }
+            if (Input.GetAxisRaw("FireP" + playerInfo.playerIndex) > 0 && canShoot)
+            {
+                StartCoroutine(FireFood());
+                canShoot = false;
+            }
+        }else if(Application.platform == RuntimePlatform.OSXEditor || Application.platform == RuntimePlatform.OSXPlayer)
         {
-            StartCoroutine(FireFood());
-            canShoot = false;
+            float rotX = Input.GetAxis("RotOSXXP" + playerInfo.playerIndex);
+            float rotY = Input.GetAxis("RotOSXYP" + playerInfo.playerIndex);
+
+            float heading = Mathf.Atan2(rotX, rotY);
+            if ((rotX != 0) || rotY != 0)
+            {
+                transform.rotation = Quaternion.Euler(0, heading * Mathf.Rad2Deg * -1, 0);
+
+            }
+            if (Input.GetAxisRaw("FireOSXP" + playerInfo.playerIndex) > 0 && canShoot)
+            {
+                StartCoroutine(FireFood());
+                canShoot = false;
+            }
         }
+        
     }
     
     
