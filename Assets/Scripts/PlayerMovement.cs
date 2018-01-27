@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour {
     public float moveSpeed;
     private PlayerInfo playerInfo;
     private Animator animator;
+    public bool canMove = false;
 
 	void Start () {
         playerInfo = GetComponent<PlayerInfo>();
@@ -15,16 +16,18 @@ public class PlayerMovement : MonoBehaviour {
 	
 	void Update ()
     {
-        float moveX = Input.GetAxis("HorizontalP"+playerInfo.playerIndex);
-        float moveZ = Input.GetAxis("VerticalP"+playerInfo.playerIndex);
-        if(moveX != 0 || moveZ != 0)
+        if (canMove)
         {
-            animator.SetBool("Running", true);
-            transform.Translate(moveX * moveSpeed * Time.deltaTime, 0, moveZ * moveSpeed * Time.deltaTime, Space.World);
-        }else
-        {
-            animator.SetBool("Running", false);
+            float moveX = Input.GetAxis("HorizontalP"+playerInfo.playerIndex);
+            float moveZ = Input.GetAxis("VerticalP"+playerInfo.playerIndex);
+            if(moveX != 0 || moveZ != 0)
+            {
+                animator.SetBool("Running", true);
+                transform.Translate(moveX * moveSpeed * Time.deltaTime, 0, moveZ * moveSpeed * Time.deltaTime, Space.World);
+            }else
+            {
+                animator.SetBool("Running", false);
+            }
         }
-
 	}
 }
