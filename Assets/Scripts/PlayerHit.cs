@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerHit : MonoBehaviour {
     public  PlayerLoot playerLoot;
     public PlayerInfo playerInfo;
@@ -31,6 +31,7 @@ public class PlayerHit : MonoBehaviour {
                     playerLoot.HealthCount++;
                     break;
             }
+            GetComponent<Rigidbody>().AddForce((transform.position - col.transform.position) * 20, ForceMode.Impulse);
             GameObject otherPlayer = GameObject.FindGameObjectsWithTag("Player").First(go => go.GetComponent<PlayerInfo>().playerIndex != GetComponent<PlayerInfo>().playerIndex);
             otherPlayer.GetComponent<PlayerInfo>().landedShots++;
             Debug.Log(gameObject.name + " collided with " + col.gameObject.name);
