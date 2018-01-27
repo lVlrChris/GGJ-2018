@@ -22,9 +22,9 @@ public class FoodSpawner : MonoBehaviour {
     public void SelectSpawnPoint(){
         int randomIndex = Random.Range(0, spawnPoints.Count);
         //Debug.Log("INDEX" + randomIndex);
-   //     Vector3 spawnPoint =  spawnPoints[randomIndex].transform.position;
+        GameObject spawnPoint =  spawnPoints[randomIndex];
    //     Debug.Log(CheckIfSpawnIsFree(spawnPoint));
-
+        /*
         foreach (var spwnpnt in spawnPoints)
         {
             if (CheckIfSpawnIsFree(spwnpnt.transform.position))
@@ -36,6 +36,12 @@ public class FoodSpawner : MonoBehaviour {
             else {
                 Debug.Log("not free");
             }
+        }*/
+        if(CheckIfSpawnIsFree(spawnPoint.transform.position)) {
+            SpawnNewFood(spawnPoint);
+        }
+        else{
+            SelectSpawnPoint();
         }
  
     }
