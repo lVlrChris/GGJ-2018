@@ -8,7 +8,8 @@ public class PlayerHit : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+        playerLoot = GetComponent<PlayerLoot>();
+        playerInfo = GetComponent<PlayerInfo>();           
 	}
 	
 	// Update is called once per frame
@@ -23,10 +24,13 @@ public class PlayerHit : MonoBehaviour {
         {
             switch(playerInfo.diet){
                 case Diet.Healthy:
+                    playerLoot.LootedHealthyFood.Add(col.gameObject.gameObject.name);
                     break;
                 case Diet.Snack:
+                    playerLoot.LootedJunkFood.Add(col.gameObject.gameObject.name);
                     break;
             }
+            Destroy(col.gameObject);
         }
     }
 }
