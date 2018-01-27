@@ -17,14 +17,20 @@ public class PlayerInfo : MonoBehaviour {
     public float landedShots = 0f;
 
     public Text scoreText;
-    public Slider healthySlider, junkSlider;
+
+    public Transform UIPanel;
+    private Slider healthySlider, junkSlider;
 
     private PlayerLoot playerLoot;
 
 	// Use this for initialization
 	void Start () {
         playerLoot = GetComponent<PlayerLoot>();
-	}
+        UIPanel = GameObject.Find("PanelP" + playerIndex).transform;
+        healthySlider = UIPanel.Find("HealthSlider").GetComponent<Slider>();
+        junkSlider = UIPanel.transform.Find("JunkSlider").GetComponent<Slider>();
+        scoreText = UIPanel.transform.Find("Text").GetComponent<Text>();
+    }
 
     void UpdatePercentage(){
         junkPercentage = playerLoot.JunkCount / (playerLoot.JunkCount + playerLoot.HealthCount) * 100;
