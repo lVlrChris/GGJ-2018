@@ -2063,16 +2063,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114514234880622840, guid: ba8d6d871de6141b0842df346e023684,
-        type: 2}
-      propertyPath: JunkFood.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114514234880622840, guid: ba8d6d871de6141b0842df346e023684,
-        type: 2}
-      propertyPath: spawnPoints.Array.size
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 4331228159165148, guid: ba8d6d871de6141b0842df346e023684, type: 2}
       propertyPath: m_LocalPosition.x
       value: -1.4419148
@@ -2125,18 +2115,6 @@ Prefab:
       propertyPath: spawnPoints.Array.data[3]
       value: 
       objectReference: {fileID: 1064116669}
-    - target: {fileID: 114514234880622840, guid: ba8d6d871de6141b0842df346e023684,
-        type: 2}
-      propertyPath: JunkFood.Array.data[1]
-      value: 
-      objectReference: {fileID: 4138670260827658, guid: d8391bc78ad7e49c2a5e78d2eee9efe2,
-        type: 2}
-    - target: {fileID: 114514234880622840, guid: ba8d6d871de6141b0842df346e023684,
-        type: 2}
-      propertyPath: JunkFood.Array.data[0]
-      value: 
-      objectReference: {fileID: 4138670260827658, guid: d8391bc78ad7e49c2a5e78d2eee9efe2,
-        type: 2}
     - target: {fileID: 114514234880622840, guid: ba8d6d871de6141b0842df346e023684,
         type: 2}
       propertyPath: spawnPoints.Array.data[4]
