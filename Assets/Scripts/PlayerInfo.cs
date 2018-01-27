@@ -12,6 +12,7 @@ public class PlayerInfo : MonoBehaviour {
     public float healthyPercentage = 0f;
 
     public Text scoreText;
+    public Slider healthySlider, junkSlider;
 
     private PlayerLoot playerLoot;
 
@@ -25,7 +26,9 @@ public class PlayerInfo : MonoBehaviour {
         healthyPercentage =  playerLoot.HealthCount / (playerLoot.JunkCount + playerLoot.HealthCount) * 100;
         Debug.Log("junk" + junkPercentage);
         Debug.Log("health" + healthyPercentage);
-        scoreText.text = "Junk: " + junkPercentage + "% " + "Healthy: " + healthyPercentage + "%"; 
+        scoreText.text = "Junk: " + junkPercentage + "% " + "Healthy: " + healthyPercentage + "%";
+        healthySlider.value = (healthyPercentage / 100);
+        junkSlider.value = junkPercentage / 100;
     }
 	
 	// Update is called once per frame
