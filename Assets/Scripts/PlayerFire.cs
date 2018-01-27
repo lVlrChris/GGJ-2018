@@ -32,11 +32,13 @@ public class PlayerFire : MonoBehaviour {
         if((rotX != 0) || rotY != 0)
         {
             transform.rotation = Quaternion.Euler(0, heading * Mathf.Rad2Deg * -1,0);
-            if(canShoot)
-            {
-                StartCoroutine(FireFood());
-                canShoot = false;
-            }
+            
+        }
+
+        if (Input.GetAxisRaw("FireP"+playerInfo.playerIndex) > 0 && canShoot)
+        {
+            StartCoroutine(FireFood());
+            canShoot = false;
         }
     }
     
