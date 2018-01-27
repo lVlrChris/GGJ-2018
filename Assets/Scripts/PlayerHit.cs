@@ -31,7 +31,7 @@ public class PlayerHit : MonoBehaviour {
                     playerLoot.HealthCount++;
                     break;
             }
-            GetComponent<Rigidbody>().AddForce((transform.position - col.transform.position) * 20, ForceMode.Impulse);
+            GetComponent<Rigidbody>().AddForce((transform.position - col.transform.position).normalized * 15, ForceMode.Impulse);
             GameObject otherPlayer = GameObject.FindGameObjectsWithTag("Player").First(go => go.GetComponent<PlayerInfo>().playerIndex != GetComponent<PlayerInfo>().playerIndex);
             otherPlayer.GetComponent<PlayerInfo>().landedShots++;
             Debug.Log(gameObject.name + " collided with " + col.gameObject.name);
