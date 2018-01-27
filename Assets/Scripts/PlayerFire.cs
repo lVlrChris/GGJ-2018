@@ -36,7 +36,7 @@ public class PlayerFire : MonoBehaviour {
                 transform.rotation = Quaternion.Euler(0, heading * Mathf.Rad2Deg * -1, 0);
 
             }
-            if (Input.GetAxisRaw("FireP" + playerInfo.playerIndex) > 0 && canShoot)
+            if (Input.GetAxisRaw("FireP" + playerInfo.playerIndex) > 0.2f && canShoot)
             {
                 StartCoroutine(FireFood());
                 canShoot = false;
@@ -52,7 +52,7 @@ public class PlayerFire : MonoBehaviour {
                 transform.rotation = Quaternion.Euler(0, heading * Mathf.Rad2Deg * -1, 0);
 
             }
-            if (Input.GetAxisRaw("FireOSXP" + playerInfo.playerIndex) > 0 && canShoot)
+            if (Input.GetAxisRaw("FireOSXP" + playerInfo.playerIndex) > 0.2f && canShoot)
             {
                 StartCoroutine(FireFood());
                 canShoot = false;
