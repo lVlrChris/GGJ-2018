@@ -49,4 +49,11 @@ public class PlayerInfo : MonoBehaviour {
 	void Update () {
         UpdatePercentage();
 	}
+
+    public float GetDietPoints()
+    {
+        //if(diet == Diet.JunkFood) return 
+        return diet == Diet.JunkFood ? playerLoot.JunkCount : playerLoot.HealthCount;
+            //playerLoot.HealthCount
+    }
 }
