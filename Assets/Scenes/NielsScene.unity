@@ -2506,14 +2506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c18d771837547c4bc007b2e988f349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
   gameTime: 10
-=======
-  gameTime: 32
-  audioSource: {fileID: 1338181020}
-  mainMusic: {fileID: 8300000, guid: 840cfa5d5c57a455f8814092e143814f, type: 3}
-  endMusic: {fileID: 8300000, guid: 1ccf1bac677eb419ea3858ed4fd18b8b, type: 3}
->>>>>>> Stashed changes
   GameTimer: {fileID: 455329024}
 --- !u!4 &1338181019
 Transform:
