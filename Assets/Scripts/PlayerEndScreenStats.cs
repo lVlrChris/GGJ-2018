@@ -23,6 +23,6 @@ public class PlayerEndScreenStats {
 
     public float GetLandedShotPercentage()
     {
-        return (LandedShots / FiredShots) * 100)
+        return (LandedShots / FiredShots) * 100;
     }
 }
