@@ -1,11 +1,14 @@
 fileFormatVersion: 2
 guid: 91c18d771837547c4bc007b2e988f349
-timeCreated: 1517021093
+timeCreated: 1517073241
 licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - audioSource: {instanceID: 0}
+  - mainMusic: {fileID: 8300000, guid: 840cfa5d5c57a455f8814092e143814f, type: 3}
+  - GameTimer: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

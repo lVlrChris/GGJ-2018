@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 95067788427137940}
   - component: {fileID: 65352806207823606}
   m_Layer: 0
-  m_Name: Drumstick
+  m_Name: DrumStick
   m_TagString: JunkFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
