@@ -1,18 +1,18 @@
 fileFormatVersion: 2
-guid: ac6a04612d58723449c1857dad7b4653
-timeCreated: 1517017665
+guid: 537d77794d7591b448d875c34ca42247
+timeCreated: 1517047770
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Banana01
+    100000: PizzaSlice
     100002: //RootNode
-    400000: Banana01
+    400000: PizzaSlice
     400002: //RootNode
-    2100000: Banana01Mat
-    2300000: Banana01
-    3300000: Banana01
-    4300000: Banana01
+    2100000: PizzaSliceMat
+    2300000: PizzaSlice
+    3300000: PizzaSlice
+    4300000: PizzaSlice
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -51,7 +51,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
