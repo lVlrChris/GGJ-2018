@@ -480,7 +480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1098b1b267aaae24dbfec4c47c43597b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerIndex: 2
+  playerIndex: 1
   name: Potje
   diet: 1
   junkPercentage: 0
