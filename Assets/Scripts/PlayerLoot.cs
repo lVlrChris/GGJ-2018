@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerLoot : MonoBehaviour {
-    public int JunkCount, HealthCount;
+    public float JunkCount, HealthCount;
     public List<string> LootedJunkFood = new List<string>();
     public List<string> LootedHealthyFood = new List<string>();
     public FoodSpawner foodSpawner;
