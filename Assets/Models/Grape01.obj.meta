@@ -1,18 +1,18 @@
 fileFormatVersion: 2
-guid: ac6a04612d58723449c1857dad7b4653
-timeCreated: 1517017665
+guid: 226696ebf0e65244bb9f54d20c91c5a6
+timeCreated: 1517028049
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Banana01
-    100002: //RootNode
-    400000: Banana01
-    400002: //RootNode
-    2100000: Banana01Mat
-    2300000: Banana01
-    3300000: Banana01
-    4300000: Banana01
+    100000: //RootNode
+    100002: Grapes01
+    400000: //RootNode
+    400002: Grapes01
+    2100000: Grapes01Mat
+    2300000: Grapes01
+    3300000: Grapes01
+    4300000: Grapes01
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -43,7 +43,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.15
+    globalScale: 0.1
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
@@ -51,7 +51,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
