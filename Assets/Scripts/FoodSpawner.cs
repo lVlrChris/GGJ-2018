@@ -11,20 +11,21 @@ public class FoodSpawner : MonoBehaviour {
     public int maxFoodSpawns;
     private int spawnedFood;
 
+    public GameObject arena;
 
     public List<GameObject> JunkFoods = new List<GameObject>();
     public List<GameObject> HealthyFoods = new List<GameObject>();
 
 	// Use this for initialization
 	void Start () {
-        maxFoodSpawns = spawnPoints.Count - 1;
+        //maxFoodSpawns = spawnPoints.Count - 1;
         SelectSpawnPoint();
 	}
 
     public void SelectSpawnPoint(){
         JunkFoods.RemoveAll(item => item == null); 
         HealthyFoods.RemoveAll(item => item == null); 
-        while ((JunkFoods.Count + HealthyFoods.Count) < maxFoodSpawns)
+       /* while ((JunkFoods.Count + HealthyFoods.Count) < maxFoodSpawns)
         {
             int randomIndex = Random.Range(0, spawnPoints.Count);
             //Debug.Log("INDEX" + randomIndex);
@@ -43,27 +44,43 @@ public class FoodSpawner : MonoBehaviour {
                     Debug.Log("not free");
                 }
             }*/
-            if (CheckIfSpawnIsFree(spawnPoint.transform.position))
-            {
-                SpawnNewFood(spawnPoint);
-            }
-            else
-            {
-                SelectSpawnPoint();
-            }
-        }
+          //  if (CheckIfSpawnIsFree(spawnPoint.transform.position))
+           // {
+
+                SpawnNewFood();
+           // }
+           // else
+           // {
+             //   SelectSpawnPoint();
+        //    }
+
  
     }
     
-    void SpawnNewFood( GameObject spawnPoint){
+    void SpawnNewFood(){
         //nog random
         int healthyIndex = Random.Range(0, HealthyFood.Length);
         int junkIndex = Random.Range(0, JunkFood.Length);
 
         Transform food = (JunkFoods.Count > HealthyFoods.Count) ? HealthyFood[healthyIndex] : JunkFood[junkIndex];
-        Transform go = Instantiate(food, spawnPoint.transform.position, Quaternion.identity, spawnPoint.transform) as Transform;
-        go.name = go.name.Split('(')[0];
-        UpdateFoodLists();
+
+        if ((JunkFoods.Count + HealthyFoods.Count) < maxFoodSpawns)
+        {
+            Vector3 position = Random.insideUnitSphere * 7 + arena.GetComponent<Renderer>().bounds.center;
+            position.y = 0;
+
+
+            print(position);
+            if (CheckIfSpawnIsFree(position))
+            {
+                GameObject empty = Instantiate(new GameObject(), position, Quaternion.identity) as GameObject;
+                Transform go = Instantiate(food, empty.transform.position, Quaternion.identity, empty.transform) as Transform;
+                go.name = go.name.Split('(')[0];
+                UpdateFoodLists();
+            }
+           
+        }
+
     }
 
     bool CheckIfSpawnIsFree(Vector3 spawnPoint){
@@ -81,11 +98,11 @@ public class FoodSpawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        /*
+        
         if (Input.GetKeyDown("space")){
             Debug.Log(spawnPoints.Count);
             SelectSpawnPoint();
         }
-        */
+
 	}
 }
