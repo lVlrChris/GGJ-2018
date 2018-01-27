@@ -20,9 +20,9 @@ public class GameManager : MonoBehaviour {
     }
 	
 	
-    public void StartGame()
+    public void StartGame(string gameScene = "NielsScene")
     {
-        SceneManager.LoadScene("NielsScene");
+        SceneManager.LoadScene(gameScene);
         StartCoroutine(SpawnPlayers());
     }
 
