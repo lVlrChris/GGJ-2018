@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour {
                                                                 p2Info.junkPercentage, p2Info.healthyPercentage, p2Info.GetDietPoints());
         SceneManager.LoadScene("EndGame");
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.1f);
         Transform panelP1 = GameObject.Find("PanelP1").transform;
         Transform panelP2 = GameObject.Find("PanelP2").transform;
 
