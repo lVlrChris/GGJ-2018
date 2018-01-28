@@ -10,7 +10,7 @@ public class BlinkLight : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+        GetComponent<Light>().range = Random.Range(minRange, maxRange);
 	}
 	
 	// Update is called once per frame

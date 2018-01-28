@@ -72,8 +72,8 @@ Transform:
   m_LocalPosition: {x: -0.006351476, y: -0.05, z: -1.9114809}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4444039521254650}
   - {fileID: 4519536796028312}
+  - {fileID: 4444039521254650}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -88,7 +88,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4426782793804796}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4519536796028312
 Transform:
@@ -101,7 +101,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4426782793804796}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23413807421732290
 MeshRenderer:
@@ -183,8 +183,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.7921569, g: 0.6666667, b: 0.16470589, a: 1}
-  m_Intensity: 1
-  m_Range: 10
+  m_Intensity: 0.8
+  m_Range: 1.07
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -196,7 +196,7 @@ Light:
     m_NormalBias: 0.4
     m_NearPlane: 0.2
   m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
+  m_DrawHalo: 1
   m_Flare: {fileID: 0}
   m_RenderMode: 0
   m_CullingMask:
