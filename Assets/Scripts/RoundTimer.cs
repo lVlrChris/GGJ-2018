@@ -16,7 +16,7 @@ public class RoundTimer : MonoBehaviour {
     bool countingDown = true;
     public Text gameTimer;
     public Text countdownText;
-    public RectTransform gameIntro;
+    public Transform gameIntro;
     private GameManager gameManager;
 	// Use this for initialization
 	void Start () {
