@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 4435710617761430}
   - component: {fileID: 33431683935562830}
   - component: {fileID: 23684007254022830}
+  - component: {fileID: 95903482519866416}
   m_Layer: 8
   m_Name: HotdogBun1
   m_TagString: Untagged
@@ -283,6 +284,23 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1786242124513462}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ee72120c37889480ebc7cbb67357afe6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95903482519866416
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1763743242525944}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: ee72120c37889480ebc7cbb67357afe6, type: 2}

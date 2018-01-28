@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 4442671552989258}
   - component: {fileID: 33412589919828234}
   - component: {fileID: 23708459877467334}
+  - component: {fileID: 95987378831914700}
   m_Layer: 8
   m_Name: Banana01
   m_TagString: Untagged
@@ -88,25 +89,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4748627376112214}
   - component: {fileID: 65428805575631510}
-  - component: {fileID: 95784324889351152}
   m_Layer: 8
   m_Name: Banana
   m_TagString: HealthyFood
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1870690224903242
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4644469721165108}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -178,7 +163,7 @@ Transform:
   - {fileID: 4246710233969770}
   - {fileID: 4088998864531392}
   m_Father: {fileID: 4748627376112214}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4442671552989258
 Transform:
@@ -193,19 +178,6 @@ Transform:
   m_Father: {fileID: 4748627376112214}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4644469721165108
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1870690224903242}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4748627376112214}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4748627376112214
 Transform:
   m_ObjectHideFlags: 1
@@ -218,7 +190,6 @@ Transform:
   m_Children:
   - {fileID: 4442671552989258}
   - {fileID: 4322753610788226}
-  - {fileID: 4644469721165108}
   - {fileID: 4402286403294908}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -276,13 +247,13 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.41, y: -0.53, z: 1.31}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &95784324889351152
+--- !u!95 &95987378831914700
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1774271316708424}
+  m_GameObject: {fileID: 1455997364728132}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 32723c980fecd484590d05e66240f8b9, type: 2}
@@ -404,7 +375,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -58602804
+  randomSeed: 807839880
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3765,7 +3736,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 2030992256
+  randomSeed: 763700352
   InitialModule:
     serializedVersion: 3
     enabled: 1

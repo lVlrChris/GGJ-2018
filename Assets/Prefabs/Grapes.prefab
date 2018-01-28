@@ -54,7 +54,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4493760413669036}
   - component: {fileID: 65878448464753292}
-  - component: {fileID: 95364865198814898}
   m_Layer: 8
   m_Name: Grapes
   m_TagString: HealthyFood
@@ -72,6 +71,7 @@ GameObject:
   - component: {fileID: 4461760506797966}
   - component: {fileID: 33154648214594708}
   - component: {fileID: 23565944554101066}
+  - component: {fileID: 95043949241347480}
   m_Layer: 8
   m_Name: Grapes01
   m_TagString: Untagged
@@ -247,13 +247,13 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6, y: 0.43553543, z: 1.0722977}
   m_Center: {x: 0, y: 0.0822323, z: 0.0805189}
---- !u!95 &95364865198814898
+--- !u!95 &95043949241347480
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1709238735215474}
+  m_GameObject: {fileID: 1719968265970204}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 73f5984afa4b50a45a5de988058ce190, type: 2}
