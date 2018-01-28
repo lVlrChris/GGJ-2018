@@ -67,13 +67,9 @@ public class FoodSpawner : MonoBehaviour {
 
             Transform food = (JunkFoods.Count > HealthyFoods.Count) ? HealthyFood[healthyIndex] : JunkFood[junkIndex];
 
-
-            print(arena.GetComponent<Renderer>().bounds.center);
             Vector3 position = Random.insideUnitSphere * 7 + arena.GetComponent<Renderer>().bounds.center;
             position.y = 0;
 
-
-            print(position);
             if (CheckIfSpawnIsFree(position))
             {
                 GameObject empty = Instantiate(new GameObject(), position, Quaternion.identity) as GameObject;
