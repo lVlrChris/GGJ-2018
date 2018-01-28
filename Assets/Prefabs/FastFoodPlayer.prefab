@@ -664,7 +664,6 @@ MonoBehaviour:
   aimingArrow: {fileID: 4585488015606000}
   arrowFadeSpeed: 5
   spawnPoint: {fileID: 4377493113790670}
-  audioSource: {fileID: 82076869881693348}
   fireBlank: {fileID: 0}
   fire: {fileID: 0}
 --- !u!137 &137183766072981000
@@ -735,7 +734,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
