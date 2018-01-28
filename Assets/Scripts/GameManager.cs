@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour {
         print("WINNEEEER" + winner);
 
         GameObject snackyWin = GameObject.Find("SnackyWin");
-        GameObject snackyLose = GameObject.Find("FruityLose");
+        GameObject snackyLose = GameObject.Find("SnackyLose");
         // snackyLose.SetActive(true);
 
         GameObject fruityWin = GameObject.Find("FruityWin");
