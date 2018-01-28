@@ -9,4 +9,12 @@ public class Projectile : MonoBehaviour {
     void Update () {
         transform.Translate(0, 0, moveSpeed * Time.deltaTime);
 	}
+
+    void OnCollisionEnter(Collision col)
+    {
+        if (!col.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }

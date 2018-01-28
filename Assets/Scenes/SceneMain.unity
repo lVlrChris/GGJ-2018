@@ -4622,6 +4622,12 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224138957997218482, guid: 95153e0eb4aabb145babc3d08aae718f,
     type: 2}
   m_PrefabInternal: {fileID: 927749374}
+--- !u!114 &927749377 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114341516591379446, guid: 95153e0eb4aabb145babc3d08aae718f,
+    type: 2}
+  m_PrefabInternal: {fileID: 927749374}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &943422245
 Prefab:
   m_ObjectHideFlags: 0
@@ -5200,7 +5206,7 @@ Prefab:
         type: 2}
       propertyPath: gameTimer
       value: 
-      objectReference: {fileID: 927749375}
+      objectReference: {fileID: 927749377}
     - target: {fileID: 114621763918322322, guid: 085f1a26632aea64b8ebbec5759b66e2,
         type: 2}
       propertyPath: countdownText
