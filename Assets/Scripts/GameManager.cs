@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour {
     public Slider scoreSlider;
     public AudioSource audioSource;
     public AudioClip endMusic;
-    private string winner;
+    public string winner;
 
 
     private int p1Score, p2Score;
@@ -97,6 +97,8 @@ public class GameManager : MonoBehaviour {
         panelP2.Find("JunkPercentage").GetComponent<Text>().text = "Junk food: " + p2stats.JunkPercentage.ToString() + "%";
         panelP2.Find("HealthyPercentage").GetComponent<Text>().text = "Healthy food: "+p2stats.HealthyPercentage.ToString() + "%";
         panelP2.Find("DietPoints").GetComponent<Text>().text = "Diet Points: " + p2stats.DietPoints.ToString();
+       
+        print("WINNEEEER" + winner);
 
         GameObject snackyWin = GameObject.Find("SnackyWin");
         GameObject snackyLose = GameObject.Find("FruityLose");
@@ -104,13 +106,12 @@ public class GameManager : MonoBehaviour {
 
         GameObject fruityWin = GameObject.Find("SnackyWin");
         GameObject fruityLose = GameObject.Find("FruityLose");
-        print("winner");
         if(winner.Equals("snacky")) {
-            snackyWin.SetActive(true);
-            fruityLose.SetActive(true);
+            snackyWin.transform.GetChild(0).gameObject.SetActive(true);
+            fruityLose.transform.GetChild(0).gameObject.SetActive(true);
         } else if (winner.Equals("fruity")) {
-            snackyLose.SetActive(true);
-            fruityWin.SetActive(true);   
+            snackyLose.transform.GetChild(0).gameObject.SetActive(true);
+            fruityWin.transform.GetChild(0).gameObject.SetActive(true);
         }
 
 
