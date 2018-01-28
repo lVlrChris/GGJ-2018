@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4138670260827658}
   - component: {fileID: 65051550208713320}
   - component: {fileID: 95828932524356064}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pizza
   m_TagString: JunkFood
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4790253396173160}
   - component: {fileID: 33918418744695482}
   - component: {fileID: 23111283963677164}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PizzaSlice
   m_TagString: Untagged
   m_Icon: {fileID: 0}

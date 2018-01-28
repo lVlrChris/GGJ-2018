@@ -17,12 +17,17 @@ public class PlayerFire : MonoBehaviour {
     public GameObject banana;
     public GameObject nope;
 
+    public Transform aimingArrow;
+    public float arrowFadeSpeed;
+    private Material material;
     public Transform spawnPoint;
 
     void Start () {
         playerLoot = GetComponent<PlayerLoot>();
-        playerInfo = GetComponent<PlayerInfo>();	
-	}
+        playerInfo = GetComponent<PlayerInfo>();
+
+        material = aimingArrow.GetComponent<SpriteRenderer>().material;
+    }
 	
 	void Update () {
         
@@ -35,6 +40,13 @@ public class PlayerFire : MonoBehaviour {
             if ((rotX != 0) || rotY != 0)
             {
                 transform.rotation = Quaternion.Euler(0, heading * Mathf.Rad2Deg * -1, 0);
+                float alpha = Mathf.Lerp(material.color.a, 1f, arrowFadeSpeed * Time.deltaTime);
+                material.SetColor("_Color", new Color(material.color.r, material.color.g, material.color.b, alpha));
+            }
+            else
+            {
+                float alpha = Mathf.Lerp(material.color.a, 0f, arrowFadeSpeed * Time.deltaTime);
+                material.SetColor("_Color", new Color(material.color.r, material.color.g, material.color.b, alpha));
 
             }
             if (Input.GetAxisRaw("FireP" + playerInfo.playerIndex) > 0.2f && canShoot)
@@ -51,6 +63,9 @@ public class PlayerFire : MonoBehaviour {
             if ((rotX != 0) || rotY != 0)
             {
                 transform.rotation = Quaternion.Euler(0, heading * Mathf.Rad2Deg * -1, 0);
+
+            }else
+            {
 
             }
             if (Input.GetAxisRaw("FireOSXP" + playerInfo.playerIndex) > 0.2f && canShoot)
@@ -74,14 +89,14 @@ public class PlayerFire : MonoBehaviour {
                     {
                         case "Banana":
                             print("Fire BANANA!");
-                            Instantiate(banana, spawnPoint.position, spawnPoint.transform.rotation);
+                            Instantiate(banana, new Vector3(spawnPoint.position.x, spawnPoint.position.y + banana.transform.position.y,spawnPoint.position.z), spawnPoint.transform.rotation);
                             break;
                         case "Apple":
                             print("Fire APPLE!");
-                            Instantiate(apple, spawnPoint.position, spawnPoint.transform.rotation);
+                            Instantiate(apple, new Vector3(spawnPoint.position.x, spawnPoint.position.y + apple.transform.position.y, spawnPoint.position.z), spawnPoint.transform.rotation);
                             break;
                         case "Grapes":
-                            Instantiate(grapes, spawnPoint.position, spawnPoint.transform.rotation);
+                            Instantiate(grapes, new Vector3(spawnPoint.position.x, spawnPoint.position.y + grapes.transform.position.y, spawnPoint.position.z), spawnPoint.transform.rotation);
                             print("Fire GRAPES!");
                             break;
                     }
@@ -100,15 +115,15 @@ public class PlayerFire : MonoBehaviour {
                     switch (playerLoot.LootedJunkFood[playerLoot.LootedJunkFood.Count - 1])
                     {
                         case "Hotdog":
-                            Instantiate(hotdog, spawnPoint.position, spawnPoint.transform.rotation);
+                            Instantiate(hotdog, new Vector3(spawnPoint.position.x, spawnPoint.position.y + hotdog.transform.position.y, spawnPoint.position.z), spawnPoint.transform.rotation);
                             print("Fire HOTDOG!");
                             break;
                         case "Pizza":
-                            Instantiate(pizza, spawnPoint.position, spawnPoint.transform.rotation);
+                            Instantiate(pizza, new Vector3(spawnPoint.position.x, spawnPoint.position.y + pizza.transform.position.y, spawnPoint.position.z), spawnPoint.transform.rotation);
                             print("Fire PIZZA!");
                             break;
                         case "DrumStick":
-                            Instantiate(drumstick, spawnPoint.position, spawnPoint.transform.rotation);
+                            Instantiate(drumstick, new Vector3(spawnPoint.position.x, spawnPoint.position.y + drumstick.transform.position.y, spawnPoint.position.z), spawnPoint.transform.rotation);
 
                             print("Fire DRUMSTICK!");
                             break;

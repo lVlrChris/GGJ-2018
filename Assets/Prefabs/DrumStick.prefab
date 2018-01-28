@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23413807421732290}
   - component: {fileID: 95067788427137940}
   - component: {fileID: 65352806207823606}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DrumStick
   m_TagString: JunkFood
   m_Icon: {fileID: 0}

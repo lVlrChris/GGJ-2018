@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 65034132277152776}
   - component: {fileID: 114029594747816208}
   - component: {fileID: 54956990395813060}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PizzaProjectile
   m_TagString: Projectile
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 4868370788466408}
   - component: {fileID: 33502803445845010}
   - component: {fileID: 23996606099514576}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PizzaSlice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,8 +139,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.43696022, z: 0.63801587}
-  m_Center: {x: 0, y: 0.07149679, z: 0.0056274026}
+  m_Size: {x: 1, y: 0.33938393, z: 0.63801587}
+  m_Center: {x: 2.3322496e-17, y: 0.120284945, z: 0.0056274026}
 --- !u!114 &114029594747816208
 MonoBehaviour:
   m_ObjectHideFlags: 1

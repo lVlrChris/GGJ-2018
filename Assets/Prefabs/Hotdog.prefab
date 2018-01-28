@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4435710617761430}
   - component: {fileID: 33431683935562830}
   - component: {fileID: 23684007254022830}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HotdogBun1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4813364876592774}
   - component: {fileID: 65163360395149908}
   - component: {fileID: 95805809930880092}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hotdog
   m_TagString: JunkFood
   m_Icon: {fileID: 0}

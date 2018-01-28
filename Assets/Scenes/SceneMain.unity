@@ -10097,11 +10097,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4826134562080502, guid: 34dea09592776ac4e8b60ae71f2464ee, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5.02
+      value: 3.84
       objectReference: {fileID: 0}
     - target: {fileID: 4826134562080502, guid: 34dea09592776ac4e8b60ae71f2464ee, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -15.35
+      value: -16.17
       objectReference: {fileID: 0}
     - target: {fileID: 4826134562080502, guid: 34dea09592776ac4e8b60ae71f2464ee, type: 2}
       propertyPath: m_LocalRotation.x
@@ -10123,39 +10123,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 4806211443792884, guid: 34dea09592776ac4e8b60ae71f2464ee, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -14.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 4966921609467940, guid: 34dea09592776ac4e8b60ae71f2464ee, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 15.63
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34dea09592776ac4e8b60ae71f2464ee, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1534163995 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1355039541810460, guid: 34dea09592776ac4e8b60ae71f2464ee,
-    type: 2}
-  m_PrefabInternal: {fileID: 1534163994}
---- !u!95 &1534163996
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1534163995}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7e5f75cb5655ea540a83a206602284f2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!4 &1534163997 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4826134562080502, guid: 34dea09592776ac4e8b60ae71f2464ee,

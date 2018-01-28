@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4018163820322296}
   - component: {fileID: 65279739966698400}
   - component: {fileID: 95313044073379322}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Apple
   m_TagString: HealthyFood
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4279704406728304}
   - component: {fileID: 33845581217461446}
   - component: {fileID: 23665521913680800}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Apple01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

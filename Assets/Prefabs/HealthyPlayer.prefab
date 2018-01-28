@@ -525,6 +525,8 @@ MonoBehaviour:
   grapes: {fileID: 1709238735215474, guid: 835930cd4f328b1458fb250de5037591, type: 2}
   banana: {fileID: 1774271316708424, guid: 9291027d091833648bb4e015d5965b77, type: 2}
   nope: {fileID: 1268871384574504, guid: a7198f738ebdf354f98c4550950d0235, type: 2}
+  aimingArrow: {fileID: 4059339251565016}
+  arrowFadeSpeed: 5
   spawnPoint: {fileID: 4647162278590724}
 --- !u!114 &114269556862697078
 MonoBehaviour:
