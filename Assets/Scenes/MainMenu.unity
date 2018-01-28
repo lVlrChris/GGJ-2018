@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6114022, g: 0.5646899, b: 0.55015945, a: 1}
+  m_IndirectSpecularColor: {r: 0.607354, g: 0.5605408, b: 0.5447832, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -523,7 +523,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 685693218}
-  m_LocalRotation: {x: -0.024728991, y: 0.019256715, z: 0.07825962, w: 0.9964402}
+  m_LocalRotation: {x: -0.024728993, y: 0.019256717, z: 0.078259625, w: 0.99644023}
   m_LocalPosition: {x: -5.08, y: -2.56, z: 0.0062333327}
   m_LocalScale: {x: 0.56381524, y: 0.5638153, z: 0.5638153}
   m_Children: []
@@ -906,6 +906,8 @@ MonoBehaviour:
   spawnPosP2: {fileID: 0}
   p1: {fileID: 0}
   p2: {fileID: 0}
+  scoreSlider: {fileID: 114576177129656640, guid: 1afc5fd41c0ad124f9b6fa6bab9bd629,
+    type: 2}
 --- !u!4 &1327719655
 Transform:
   m_ObjectHideFlags: 0

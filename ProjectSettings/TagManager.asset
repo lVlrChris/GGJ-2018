@@ -8,6 +8,7 @@ TagManager:
   - HealthyFood
   - SpawnPoint
   - Projectile
+  - ScoreSlider
   layers:
   - Default
   - TransparentFX

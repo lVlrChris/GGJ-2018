@@ -147,7 +147,9 @@ public class GameManager : MonoBehaviour {
         p1Percentage = (p1Points / (p1Points + p2Points) ) * 100;
         print("p1% : " + p1Percentage);
 
-        scoreSlider.value = (p1Percentage / 100);
+        var healthbar = GameObject.FindWithTag("ScoreSlider");
+        print(healthbar.GetComponent<Slider>().value);
+        healthbar.GetComponent<Slider>().value = (p1Percentage / 100);  //.GetComponent<Slider>().value = (p1Percentage / 100);
     }
 
     private void Update()
