@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour {
     public GameObject p1;
     public GameObject p2;
     public Slider scoreSlider;
+    public AudioSource audioSource;
+    public AudioClip endMusic;
+
     private int p1Score, p2Score;
     public bool inGame = false;
 
@@ -62,6 +65,8 @@ public class GameManager : MonoBehaviour {
 
     public IEnumerator EndTheGame()
     {
+        audioSource.Play();
+
         PlayerInfo p1Info = p1.GetComponent<PlayerInfo>();
         PlayerInfo p2Info = p2.GetComponent<PlayerInfo>();
 
