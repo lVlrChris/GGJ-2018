@@ -112,6 +112,11 @@ public class GameManager : MonoBehaviour {
             snackyLose.transform.GetChild(0).gameObject.SetActive(true);
             fruityWin.transform.GetChild(0).gameObject.SetActive(true);
         }
+        else if(winner.Equals("draw")){
+            snackyWin.transform.GetChild(0).gameObject.SetActive(true);
+            fruityWin.transform.GetChild(0).gameObject.SetActive(true);
+
+        }
 
 
        /* Text winnerText = GameObject.Find("WinnerText").GetComponent<Text>();
@@ -137,7 +142,7 @@ public class GameManager : MonoBehaviour {
         print("p1 score: " + p1Score);
         print("p2 score: " + p2Score);
         */
-        if (p1Score == p2Score) { return "DRAW"; }
+        if (p1Score == p2Score) { winner = "draw";return "DRAW"; }
         if (p1Score > p2Score) { winner = "snacky"; } else { winner = "fruity"; }
         return p1Score > p2Score ? "SNACKY WINS" : "FRUITY WINS";
     }
