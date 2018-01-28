@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour {
     public Slider scoreSlider;
     public AudioSource audioSource;
     public AudioClip endMusic;
-
+    private string winner;
 
 
     private int p1Score, p2Score;
@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour {
                                                                 p1Info.junkPercentage, p1Info.healthyPercentage, p1Info.GetDietPoints());
         PlayerEndScreenStats p2stats = new PlayerEndScreenStats(p2Info.firedShots,p2Info.landedShots,
                                                                 p2Info.junkPercentage, p2Info.healthyPercentage, p2Info.GetDietPoints());
-        SceneManager.LoadScene("EndGame");
+        SceneManager.LoadScene("VictoryScene");
 
         yield return new WaitForSeconds(0.1f);
         Transform panelP1 = GameObject.Find("PanelP1").transform;
@@ -98,11 +98,25 @@ public class GameManager : MonoBehaviour {
         panelP2.Find("HealthyPercentage").GetComponent<Text>().text = "Healthy food: "+p2stats.HealthyPercentage.ToString() + "%";
         panelP2.Find("DietPoints").GetComponent<Text>().text = "Diet Points: " + p2stats.DietPoints.ToString();
 
+        GameObject snackyWin = GameObject.Find("SnackyWin");
+        GameObject snackyLose = GameObject.Find("FruityLose");
+        // snackyLose.SetActive(true);
+
+        GameObject fruityWin = GameObject.Find("SnackyWin");
+        GameObject fruityLose = GameObject.Find("FruityLose");
+        print("winner");
+        if(winner.Equals("snacky")) {
+            snackyWin.SetActive(true);
+            fruityLose.SetActive(true);
+        } else if (winner.Equals("fruity")) {
+            snackyLose.SetActive(true);
+            fruityWin.SetActive(true);   
+        }
 
 
         Text winnerText = GameObject.Find("WinnerText").GetComponent<Text>();
-        string winner = DetermineWinner(p1stats, p2stats);
-        winnerText.text =  winner; 
+        string winnerst = DetermineWinner(p1stats, p2stats);
+        winnerText.text =  winnerst; 
         print(winnerText.text);
     }
 
@@ -123,8 +137,8 @@ public class GameManager : MonoBehaviour {
         print("p1 score: " + p1Score);
         print("p2 score: " + p2Score);
         */
-        print("WOW " + p1Score + " vs " + p2Score + "!");
         if (p1Score == p2Score) { return "DRAW"; }
+        if (p1Score > p2Score) { winner = "snacky"; } else { winner = "fruity"; }
         return p1Score > p2Score ? "SNACKY WINS" : "FRUITY WINS";
     }
 
@@ -147,7 +161,6 @@ public class GameManager : MonoBehaviour {
         p1Points += p1stats.LandedShots * ScorePoints.accuracyBonus;
 
         p1Points += (p1Loot.HealthCount * ScorePoints.wrongFood);
-        print("p1 score "+ p1Points);
 
         print(p1.name);
 
