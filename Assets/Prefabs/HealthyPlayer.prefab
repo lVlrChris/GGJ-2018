@@ -637,6 +637,8 @@ MonoBehaviour:
   LootedJunkFood: []
   LootedHealthyFood: []
   foodSpawner: {fileID: 0}
+  eatNice: {fileID: 8300000, guid: 37284f2585fce40709c279ac7318ed4c, type: 3}
+  eatDirty: {fileID: 8300000, guid: b7669886213dd4460bb6e76f914e2015, type: 3}
 --- !u!137 &137435209626713482
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
