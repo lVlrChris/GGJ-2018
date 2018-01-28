@@ -85,9 +85,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4426782793804796}
-  - component: {fileID: 33912396055656232}
-  - component: {fileID: 23413807421732290}
-  - component: {fileID: 95067788427137940}
   - component: {fileID: 65352806207823606}
   m_Layer: 8
   m_Name: DrumStick
@@ -104,8 +101,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4519536796028312}
+  - component: {fileID: 23082333402676470}
+  - component: {fileID: 33317819154381812}
+  - component: {fileID: 95447878425656316}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: DrumstickModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -131,7 +131,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1562678938131216}
   m_LocalRotation: {x: 0.00000008146034, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.006351476, y: -0.05, z: -1.9114809}
+  m_LocalPosition: {x: -0.006351476, y: 0.31, z: -1.9114809}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4519536796028312}
@@ -194,12 +194,12 @@ Transform:
   m_Father: {fileID: 4881364074810666}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23413807421732290
+--- !u!23 &23082333402676470
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1562678938131216}
+  m_GameObject: {fileID: 1815459236938358}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -228,12 +228,12 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33912396055656232
+--- !u!33 &33317819154381812
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1562678938131216}
+  m_GameObject: {fileID: 1815459236938358}
   m_Mesh: {fileID: 4300000, guid: 87d74f60661c76d4ab79ba2ecddd63fe, type: 3}
 --- !u!65 &65352806207823606
 BoxCollider:
@@ -243,17 +243,17 @@ BoxCollider:
   m_GameObject: {fileID: 1562678938131216}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.5394834, y: 0.5185117, z: 1.2119894}
   m_Center: {x: 0.035322607, y: -0.010548916, z: 0.31788507}
---- !u!95 &95067788427137940
+--- !u!95 &95447878425656316
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1562678938131216}
+  m_GameObject: {fileID: 1815459236938358}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 87d74f60661c76d4ab79ba2ecddd63fe, type: 3}
   m_Controller: {fileID: 9100000, guid: d34a3694938440141941cb742b3de811, type: 2}

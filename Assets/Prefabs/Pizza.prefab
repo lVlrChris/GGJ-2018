@@ -71,7 +71,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4138670260827658}
   - component: {fileID: 65051550208713320}
-  - component: {fileID: 95828932524356064}
   m_Layer: 8
   m_Name: Pizza
   m_TagString: JunkFood
@@ -104,6 +103,7 @@ GameObject:
   - component: {fileID: 4790253396173160}
   - component: {fileID: 33918418744695482}
   - component: {fileID: 23111283963677164}
+  - component: {fileID: 95688245919160022}
   m_Layer: 8
   m_Name: PizzaSlice
   m_TagString: Untagged
@@ -160,7 +160,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1509694657047746}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4641615503027296}
@@ -187,9 +187,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1761048701064880}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.28188434, y: 0.22202782, z: 0.005338766, w: 0.9333897}
+  m_LocalPosition: {x: -0.07776307, y: 0.4995116, z: -0.040018782}
+  m_LocalScale: {x: 0.8319547, y: 0.83195424, z: 0.83195424}
   m_Children: []
   m_Father: {fileID: 4138670260827658}
   m_RootOrder: 0
@@ -247,13 +247,13 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &95828932524356064
+--- !u!95 &95688245919160022
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1240875526131150}
+  m_GameObject: {fileID: 1761048701064880}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: ee72120c37889480ebc7cbb67357afe6, type: 2}
@@ -275,7 +275,7 @@ Light:
   m_Type: 2
   m_Color: {r: 0.7921569, g: 0.6666667, b: 0.16470589, a: 1}
   m_Intensity: 0.8
-  m_Range: 1.15
+  m_Range: 1.0653827
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -314,7 +314,7 @@ MonoBehaviour:
   minRange: 0.5
   maxRange: 2
   speed: 0.05
-  increasing: 1
+  increasing: 0
 --- !u!198 &198012260024104192
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -375,7 +375,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1292957668
+  randomSeed: -16624222
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3736,7 +3736,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -727629327
+  randomSeed: 1896165097
   InitialModule:
     serializedVersion: 3
     enabled: 1
