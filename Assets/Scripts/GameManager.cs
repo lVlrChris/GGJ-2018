@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour {
 
     public GameObject p1;
     public GameObject p2;
+    public Slider scoreSlider;
+
+
 
     void Start () {
         DontDestroyOnLoad(gameObject);
@@ -106,5 +109,52 @@ public class GameManager : MonoBehaviour {
 
         if (p1Score == p2Score) { return 0; }
         return p1Score > p2Score ? 1 : 2;
+    }
+
+
+    void CalculateScore()
+    {
+        PlayerInfo p1Info = p1.GetComponent<PlayerInfo>();
+        PlayerInfo p2Info = p2.GetComponent<PlayerInfo>();
+        PlayerLoot p1Loot = p1.GetComponent<PlayerLoot>();
+        PlayerLoot p2Loot = p2.GetComponent<PlayerLoot>();
+
+
+        PlayerEndScreenStats p1stats = new PlayerEndScreenStats(p1Info.firedShots, p1Info.landedShots,
+                                                                p1Info.junkPercentage, p1Info.healthyPercentage, p1Info.GetDietPoints());
+        PlayerEndScreenStats p2stats = new PlayerEndScreenStats(p2Info.firedShots, p2Info.landedShots,
+                                                                p2Info.junkPercentage, p2Info.healthyPercentage, p2Info.GetDietPoints());
+
+        var p1Points =  p1stats.DietPoints * ScorePoints.dietfood;
+        p1Points += p1stats.FiredShots * ScorePoints.shotPenalty;
+        p1Points += p1stats.LandedShots * ScorePoints.accuracyBonus;
+
+        p1Points += (p1Loot.HealthCount * ScorePoints.wrongFood);
+        print("p1 score "+ p1Points);
+
+        var p2Points = p2stats.DietPoints * ScorePoints.dietfood;
+        p2Points += p2stats.FiredShots * ScorePoints.shotPenalty;
+        p2Points += p2stats.LandedShots * ScorePoints.accuracyBonus;
+
+        p2Points += (p2Loot.JunkCount * ScorePoints.wrongFood);
+        print("p2 score " + p2Points);
+
+        if (p1Points < 0) p1Points = 0;
+        if (p2Points < 0) p2Points = 0;
+
+
+        float p1Percentage, p2Percentage;
+        p1Percentage = (p1Points / (p1Points + p2Points) ) * 100;
+        print("p1% : " + p1Percentage);
+
+        scoreSlider.value = (p1Percentage / 100);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown("space"))
+        {
+            CalculateScore();
+        }
     }
 }
