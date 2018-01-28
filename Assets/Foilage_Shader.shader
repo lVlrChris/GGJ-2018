@@ -1,7 +1,7 @@
 // Shader created with Shader Forge v1.38 
 // Shader Forge (c) Neat Corporation / Joachim Holmer - http://www.acegikmo.com/shaderforge/
 // Note: Manually altering this data may prevent you from opening it in Shader Forge
-/*SF_DATA;ver:1.38;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,cgin:,lico:1,lgpr:1,limd:3,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:True,hqlp:False,rprd:True,enco:False,rmgx:True,imps:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:0,bdst:1,dpts:2,wrdp:False,dith:0,atcv:False,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:True,qofs:0,qpre:3,rntp:2,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,atwp:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False,fsmp:False;n:type:ShaderForge.SFN_Final,id:2865,x:32827,y:33088,varname:node_2865,prsc:2|diff-1945-RGB,spec-288-R,gloss-288-A,normal-6577-RGB,alpha-1945-A,voffset-1133-OUT;n:type:ShaderForge.SFN_Tex2d,id:1945,x:32082,y:32568,ptovrint:False,ptlb:node_1945,ptin:_node_1945,varname:node_1945,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:2fab3d871211a704797e3da3ef672061,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Tex2d,id:288,x:32084,y:32759,ptovrint:False,ptlb:node_288,ptin:_node_288,varname:node_288,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:07fdfdf591ebaad49bde514af6fedbeb,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Tex2d,id:6577,x:32084,y:32948,ptovrint:False,ptlb:node_6577,ptin:_node_6577,varname:node_6577,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:dff4f33d10b24414d9c850583e1f0239,ntxv:3,isnm:True;n:type:ShaderForge.SFN_Multiply,id:1133,x:32389,y:33255,varname:node_1133,prsc:2|A-1348-G,B-4295-OUT;n:type:ShaderForge.SFN_TexCoord,id:9068,x:31570,y:33528,varname:node_9068,prsc:2,uv:0,uaff:False;n:type:ShaderForge.SFN_Time,id:2075,x:31570,y:33686,varname:node_2075,prsc:2;n:type:ShaderForge.SFN_OneMinus,id:1921,x:31821,y:33552,varname:node_1921,prsc:2|IN-9068-V;n:type:ShaderForge.SFN_Cos,id:9061,x:31809,y:33700,varname:node_9061,prsc:2|IN-2075-T;n:type:ShaderForge.SFN_Multiply,id:4295,x:32047,y:33625,varname:node_4295,prsc:2|A-1921-OUT,B-9061-OUT;n:type:ShaderForge.SFN_Tex2d,id:1348,x:32097,y:33154,ptovrint:False,ptlb:node_1348,ptin:_node_1348,varname:node_1348,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:c5ccfc9216677c047900da1a2c65dd3a,ntxv:0,isnm:False;proporder:1945-288-6577-1348;pass:END;sub:END;*/
+/*SF_DATA;ver:1.38;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,cgin:,lico:1,lgpr:1,limd:3,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:True,hqlp:False,rprd:True,enco:False,rmgx:True,imps:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:0,bdst:1,dpts:2,wrdp:True,dith:0,atcv:False,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:False,qofs:0,qpre:2,rntp:3,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.6323529,fgcg:0.07439446,fgcb:0.07439446,fgca:1,fgde:0.015,fgrn:0,fgrf:300,stcl:False,atwp:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False,fsmp:False;n:type:ShaderForge.SFN_Final,id:2865,x:32644,y:32596,varname:node_2865,prsc:2|diff-1945-RGB,spec-288-R,gloss-288-A,normal-6577-RGB,clip-1945-A,voffset-1133-OUT;n:type:ShaderForge.SFN_Tex2d,id:1945,x:32082,y:32568,ptovrint:False,ptlb:node_1945,ptin:_node_1945,varname:node_1945,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:ce9e7a478b8003c41b7b3c860811edeb,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Tex2d,id:288,x:32084,y:32759,ptovrint:False,ptlb:node_288,ptin:_node_288,varname:node_288,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:57d55aa5b723cd547baf346ac47833bf,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Tex2d,id:6577,x:32084,y:32948,ptovrint:False,ptlb:node_6577,ptin:_node_6577,varname:node_6577,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:d5b591af200aff34da82183d0c102453,ntxv:3,isnm:True;n:type:ShaderForge.SFN_Multiply,id:1133,x:32389,y:33255,varname:node_1133,prsc:2|A-1348-G,B-4295-OUT;n:type:ShaderForge.SFN_TexCoord,id:9068,x:31570,y:33528,varname:node_9068,prsc:2,uv:0,uaff:False;n:type:ShaderForge.SFN_Time,id:2075,x:31570,y:33686,varname:node_2075,prsc:2;n:type:ShaderForge.SFN_OneMinus,id:1921,x:31821,y:33552,varname:node_1921,prsc:2|IN-9068-V;n:type:ShaderForge.SFN_Cos,id:9061,x:31809,y:33700,varname:node_9061,prsc:2|IN-2075-T;n:type:ShaderForge.SFN_Multiply,id:4295,x:32047,y:33625,varname:node_4295,prsc:2|A-1921-OUT,B-9061-OUT;n:type:ShaderForge.SFN_Tex2d,id:1348,x:32097,y:33154,ptovrint:False,ptlb:node_1348,ptin:_node_1348,varname:node_1348,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:51cf08770dd5e234a8c777b29b511b9b,ntxv:0,isnm:False;proporder:1945-288-6577-1348;pass:END;sub:END;*/
 
 Shader "Shader Forge/Foilage_Shader" {
     Properties {
@@ -13,16 +13,15 @@ Shader "Shader Forge/Foilage_Shader" {
     }
     SubShader {
         Tags {
-            "IgnoreProjector"="True"
-            "Queue"="Transparent"
-            "RenderType"="Transparent"
+            "Queue"="AlphaTest"
+            "RenderType"="TransparentCutout"
         }
         Pass {
             Name "FORWARD"
             Tags {
                 "LightMode"="ForwardBase"
             }
-            ZWrite Off
+            
             
             CGPROGRAM
             #pragma vertex vert
@@ -31,10 +30,11 @@ Shader "Shader Forge/Foilage_Shader" {
             #define SHOULD_SAMPLE_SH ( defined (LIGHTMAP_OFF) && defined(DYNAMICLIGHTMAP_OFF) )
             #define _GLOSSYENV 1
             #include "UnityCG.cginc"
+            #include "AutoLight.cginc"
             #include "Lighting.cginc"
             #include "UnityPBSLighting.cginc"
             #include "UnityStandardBRDF.cginc"
-            #pragma multi_compile_fwdbase
+            #pragma multi_compile_fwdbase_fullshadows
             #pragma multi_compile LIGHTMAP_OFF LIGHTMAP_ON
             #pragma multi_compile DIRLIGHTMAP_OFF DIRLIGHTMAP_COMBINED DIRLIGHTMAP_SEPARATE
             #pragma multi_compile DYNAMICLIGHTMAP_OFF DYNAMICLIGHTMAP_ON
@@ -62,9 +62,10 @@ Shader "Shader Forge/Foilage_Shader" {
                 float3 normalDir : TEXCOORD4;
                 float3 tangentDir : TEXCOORD5;
                 float3 bitangentDir : TEXCOORD6;
-                UNITY_FOG_COORDS(7)
+                LIGHTING_COORDS(7,8)
+                UNITY_FOG_COORDS(9)
                 #if defined(LIGHTMAP_ON) || defined(UNITY_SHOULD_SAMPLE_SH)
-                    float4 ambientOrLightmapUV : TEXCOORD8;
+                    float4 ambientOrLightmapUV : TEXCOORD10;
                 #endif
             };
             VertexOutput vert (VertexInput v) {
@@ -92,6 +93,7 @@ Shader "Shader Forge/Foilage_Shader" {
                 float3 lightColor = _LightColor0.rgb;
                 o.pos = UnityObjectToClipPos( v.vertex );
                 UNITY_TRANSFER_FOG(o,o.pos);
+                TRANSFER_VERTEX_TO_FRAGMENT(o)
                 return o;
             }
             float4 frag(VertexOutput i) : COLOR {
@@ -102,11 +104,13 @@ Shader "Shader Forge/Foilage_Shader" {
                 float3 normalLocal = _node_6577_var.rgb;
                 float3 normalDirection = normalize(mul( normalLocal, tangentTransform )); // Perturbed normals
                 float3 viewReflectDirection = reflect( -viewDirection, normalDirection );
+                float4 _node_1945_var = tex2D(_node_1945,TRANSFORM_TEX(i.uv0, _node_1945));
+                clip(_node_1945_var.a - 0.5);
                 float3 lightDirection = normalize(_WorldSpaceLightPos0.xyz);
                 float3 lightColor = _LightColor0.rgb;
                 float3 halfDirection = normalize(viewDirection+lightDirection);
 ////// Lighting:
-                float attenuation = 1;
+                float attenuation = LIGHT_ATTENUATION(i);
                 float3 attenColor = attenuation * _LightColor0.xyz;
                 float Pi = 3.141592654;
                 float InvPi = 0.31830988618;
@@ -161,7 +165,6 @@ Shader "Shader Forge/Foilage_Shader" {
                 float LdotH = saturate(dot(lightDirection, halfDirection));
                 float3 specularColor = _node_288_var.r;
                 float specularMonochrome;
-                float4 _node_1945_var = tex2D(_node_1945,TRANSFORM_TEX(i.uv0, _node_1945));
                 float3 diffuseColor = _node_1945_var.rgb; // Need this for specular when using metallic
                 diffuseColor = DiffuseAndSpecularFromMetallic( diffuseColor, specularColor, specularColor, specularMonochrome );
                 specularMonochrome = 1.0-specularMonochrome;
@@ -202,7 +205,7 @@ Shader "Shader Forge/Foilage_Shader" {
                 float3 diffuse = (directDiffuse + indirectDiffuse) * diffuseColor;
 /// Final Color:
                 float3 finalColor = diffuse + specular;
-                fixed4 finalRGBA = fixed4(finalColor,_node_1945_var.a);
+                fixed4 finalRGBA = fixed4(finalColor,1);
                 UNITY_APPLY_FOG(i.fogCoord, finalRGBA);
                 return finalRGBA;
             }
@@ -214,7 +217,7 @@ Shader "Shader Forge/Foilage_Shader" {
                 "LightMode"="ForwardAdd"
             }
             Blend One One
-            ZWrite Off
+            
             
             CGPROGRAM
             #pragma vertex vert
@@ -227,7 +230,7 @@ Shader "Shader Forge/Foilage_Shader" {
             #include "Lighting.cginc"
             #include "UnityPBSLighting.cginc"
             #include "UnityStandardBRDF.cginc"
-            #pragma multi_compile_fwdadd
+            #pragma multi_compile_fwdadd_fullshadows
             #pragma multi_compile LIGHTMAP_OFF LIGHTMAP_ON
             #pragma multi_compile DIRLIGHTMAP_OFF DIRLIGHTMAP_COMBINED DIRLIGHTMAP_SEPARATE
             #pragma multi_compile DYNAMICLIGHTMAP_OFF DYNAMICLIGHTMAP_ON
@@ -285,6 +288,8 @@ Shader "Shader Forge/Foilage_Shader" {
                 float3 _node_6577_var = UnpackNormal(tex2D(_node_6577,TRANSFORM_TEX(i.uv0, _node_6577)));
                 float3 normalLocal = _node_6577_var.rgb;
                 float3 normalDirection = normalize(mul( normalLocal, tangentTransform )); // Perturbed normals
+                float4 _node_1945_var = tex2D(_node_1945,TRANSFORM_TEX(i.uv0, _node_1945));
+                clip(_node_1945_var.a - 0.5);
                 float3 lightDirection = normalize(lerp(_WorldSpaceLightPos0.xyz, _WorldSpaceLightPos0.xyz - i.posWorld.xyz,_WorldSpaceLightPos0.w));
                 float3 lightColor = _LightColor0.rgb;
                 float3 halfDirection = normalize(viewDirection+lightDirection);
@@ -304,7 +309,6 @@ Shader "Shader Forge/Foilage_Shader" {
                 float LdotH = saturate(dot(lightDirection, halfDirection));
                 float3 specularColor = _node_288_var.r;
                 float specularMonochrome;
-                float4 _node_1945_var = tex2D(_node_1945,TRANSFORM_TEX(i.uv0, _node_1945));
                 float3 diffuseColor = _node_1945_var.rgb; // Need this for specular when using metallic
                 diffuseColor = DiffuseAndSpecularFromMetallic( diffuseColor, specularColor, specularColor, specularMonochrome );
                 specularMonochrome = 1.0-specularMonochrome;
@@ -333,7 +337,7 @@ Shader "Shader Forge/Foilage_Shader" {
                 float3 diffuse = directDiffuse * diffuseColor;
 /// Final Color:
                 float3 finalColor = diffuse + specular;
-                fixed4 finalRGBA = fixed4(finalColor * _node_1945_var.a,0);
+                fixed4 finalRGBA = fixed4(finalColor * 1,0);
                 UNITY_APPLY_FOG(i.fogCoord, finalRGBA);
                 return finalRGBA;
             }
@@ -365,6 +369,7 @@ Shader "Shader Forge/Foilage_Shader" {
             #pragma multi_compile_fog
             #pragma only_renderers d3d9 d3d11 glcore gles 
             #pragma target 3.0
+            uniform sampler2D _node_1945; uniform float4 _node_1945_ST;
             uniform sampler2D _node_1348; uniform float4 _node_1348_ST;
             struct VertexInput {
                 float4 vertex : POSITION;
@@ -396,6 +401,8 @@ Shader "Shader Forge/Foilage_Shader" {
             }
             float4 frag(VertexOutput i) : COLOR {
                 float3 viewDirection = normalize(_WorldSpaceCameraPos.xyz - i.posWorld.xyz);
+                float4 _node_1945_var = tex2D(_node_1945,TRANSFORM_TEX(i.uv0, _node_1945));
+                clip(_node_1945_var.a - 0.5);
                 SHADOW_CASTER_FRAGMENT(i)
             }
             ENDCG

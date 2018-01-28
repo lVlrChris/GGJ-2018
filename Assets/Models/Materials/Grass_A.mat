@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Grass_A
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: 0cb43ca6d243e9841ab5c93372ef1ae8, type: 3}
   m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -52,6 +52,22 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _node_1348:
+        m_Texture: {fileID: 2800000, guid: c5ccfc9216677c047900da1a2c65dd3a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _node_1945:
+        m_Texture: {fileID: 2800000, guid: 2fab3d871211a704797e3da3ef672061, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _node_288:
+        m_Texture: {fileID: 2800000, guid: 07fdfdf591ebaad49bde514af6fedbeb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _node_6577:
+        m_Texture: {fileID: 2800000, guid: dff4f33d10b24414d9c850583e1f0239, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
