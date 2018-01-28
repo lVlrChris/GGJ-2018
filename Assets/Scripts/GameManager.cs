@@ -81,25 +81,24 @@ public class GameManager : MonoBehaviour {
         SceneManager.LoadScene("VictoryScene");
 
         yield return new WaitForSeconds(0.1f);
-        Transform panelP1 = GameObject.Find("PanelP1").transform;
-        Transform panelP2 = GameObject.Find("PanelP2").transform;
+        //Transform panelP1 = GameObject.Find("PanelP1").transform;
+        //Transform panelP2 = GameObject.Find("PanelP2").transform;
 
-        panelP1.Find("FiredShots").GetComponent<Text>().text = p1stats.FiredShots.ToString() + " fired shots";
-        panelP1.Find("LandedShots").GetComponent<Text>().text = p1stats.LandedShots.ToString() + " landed shots";
-        panelP1.Find("AimPercentage").GetComponent<Text>().text = "That's a hit percentage of " + p1stats.GetLandedShotPercentage().ToString() + "%";
-        panelP1.Find("JunkPercentage").GetComponent<Text>().text = "Junk food: " + p1stats.JunkPercentage.ToString() + "%";
-        panelP1.Find("HealthyPercentage").GetComponent<Text>().text = "Healthy food: " + p1stats.HealthyPercentage.ToString() + "%";
-        panelP1.Find("DietPoints").GetComponent<Text>().text = "Diet Points: " + p1stats.DietPoints.ToString();
+        //panelP1.Find("FiredShots").GetComponent<Text>().text = p1stats.FiredShots.ToString() + " fired shots";
+        //panelP1.Find("LandedShots").GetComponent<Text>().text = p1stats.LandedShots.ToString() + " landed shots";
+        //panelP1.Find("AimPercentage").GetComponent<Text>().text = "That's a hit percentage of " + p1stats.GetLandedShotPercentage().ToString() + "%";
+        //panelP1.Find("JunkPercentage").GetComponent<Text>().text = "Junk food: " + p1stats.JunkPercentage.ToString() + "%";
+        //panelP1.Find("HealthyPercentage").GetComponent<Text>().text = "Healthy food: " + p1stats.HealthyPercentage.ToString() + "%";
+        //panelP1.Find("DietPoints").GetComponent<Text>().text = "Diet Points: " + p1stats.DietPoints.ToString();
 
-        panelP2.Find("FiredShots").GetComponent<Text>().text = p2stats.FiredShots.ToString() + " fired shots";
-        panelP2.Find("LandedShots").GetComponent<Text>().text = p2stats.LandedShots.ToString() + " landed shots";
-        panelP2.Find("AimPercentage").GetComponent<Text>().text = "That's a hit percentage of " + p2stats.GetLandedShotPercentage().ToString() + "%";
-        panelP2.Find("JunkPercentage").GetComponent<Text>().text = "Junk food: " + p2stats.JunkPercentage.ToString() + "%";
-        panelP2.Find("HealthyPercentage").GetComponent<Text>().text = "Healthy food: "+p2stats.HealthyPercentage.ToString() + "%";
-        panelP2.Find("DietPoints").GetComponent<Text>().text = "Diet Points: " + p2stats.DietPoints.ToString();
-       
-        print("WINNEEEER" + winner);
+        //panelP2.Find("FiredShots").GetComponent<Text>().text = p2stats.FiredShots.ToString() + " fired shots";
+        //panelP2.Find("LandedShots").GetComponent<Text>().text = p2stats.LandedShots.ToString() + " landed shots";
+        //panelP2.Find("AimPercentage").GetComponent<Text>().text = "That's a hit percentage of " + p2stats.GetLandedShotPercentage().ToString() + "%";
+        //panelP2.Find("JunkPercentage").GetComponent<Text>().text = "Junk food: " + p2stats.JunkPercentage.ToString() + "%";
+        //panelP2.Find("HealthyPercentage").GetComponent<Text>().text = "Healthy food: "+p2stats.HealthyPercentage.ToString() + "%";
+        //panelP2.Find("DietPoints").GetComponent<Text>().text = "Diet Points: " + p2stats.DietPoints.ToString();
 
+        DetermineWinner(p1stats, p2stats);
         GameObject snackyWin = GameObject.Find("SnackyWin");
         GameObject snackyLose = GameObject.Find("SnackyLose");
         // snackyLose.SetActive(true);
@@ -115,10 +114,10 @@ public class GameManager : MonoBehaviour {
         }
 
 
-        Text winnerText = GameObject.Find("WinnerText").GetComponent<Text>();
-        string winnerst = DetermineWinner(p1stats, p2stats);
-        winnerText.text =  winnerst; 
-        print(winnerText.text);
+       /* Text winnerText = GameObject.Find("WinnerText").GetComponent<Text>();
+        string winnerst =
+        winnerText.text =  winnerst;*/
+        print("WINNEEEER" + winner);
     }
 
     public string DetermineWinner(PlayerEndScreenStats p1stats, PlayerEndScreenStats p2stats)
