@@ -103,7 +103,7 @@ public class GameManager : MonoBehaviour {
         GameObject snackyLose = GameObject.Find("FruityLose");
         // snackyLose.SetActive(true);
 
-        GameObject fruityWin = GameObject.Find("SnackyWin");
+        GameObject fruityWin = GameObject.Find("FruityWin");
         GameObject fruityLose = GameObject.Find("FruityLose");
         if(winner.Equals("snacky")) {
             snackyWin.transform.GetChild(0).gameObject.SetActive(true);

@@ -24,7 +24,7 @@ public class PlayerFire : MonoBehaviour {
 
     private AudioSource audioSource;
     public AudioClip fireBlank, fire;
-    private float voiceVolume= 0.4f;
+    private float voiceVolume= 0.3f;
 
 
     void Start () {
