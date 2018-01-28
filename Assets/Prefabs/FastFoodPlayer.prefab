@@ -625,6 +625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerLoot: {fileID: 114548727042205036}
   playerInfo: {fileID: 114078181364725330}
+  hurt: {fileID: 8300000, guid: ba6209f31e5484e0fa475c453b45fd6d, type: 3}
 --- !u!114 &114548727042205036
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -642,7 +643,7 @@ MonoBehaviour:
   LootedHealthyFood: []
   foodSpawner: {fileID: 0}
   eatNice: {fileID: 8300000, guid: 6b1805c39677a4fce8be4ce86f8c5802, type: 3}
-  eatDirty: {fileID: 0}
+  eatDirty: {fileID: 8300000, guid: 233d2034c7f304daf8d26267bff4cebe, type: 3}
 --- !u!114 &114564538361985168
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -666,8 +667,8 @@ MonoBehaviour:
   aimingArrow: {fileID: 4585488015606000}
   arrowFadeSpeed: 5
   spawnPoint: {fileID: 4377493113790670}
-  fireBlank: {fileID: 0}
-  fire: {fileID: 0}
+  fireBlank: {fileID: 8300000, guid: 790ecafc3b60742919852d6b19366826, type: 3}
+  fire: {fileID: 8300000, guid: 507b5f347fe574535bc73c4fd9821f51, type: 3}
 --- !u!137 &137183766072981000
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

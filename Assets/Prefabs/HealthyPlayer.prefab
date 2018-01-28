@@ -564,6 +564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerLoot: {fileID: 0}
   playerInfo: {fileID: 0}
+  hurt: {fileID: 8300000, guid: b53f728698e7748f0aed6828024d1a65, type: 3}
 --- !u!114 &114205580988277038
 MonoBehaviour:
   m_ObjectHideFlags: 1
