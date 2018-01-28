@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour {
 	
     public void StartGame(string gameScene = "SceneMain")
     {
+        audioSource.Stop();
         SceneManager.LoadScene(gameScene);
         StartCoroutine(SpawnPlayers());
     }
