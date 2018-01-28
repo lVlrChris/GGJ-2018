@@ -35,9 +35,9 @@ public class GameManager : MonoBehaviour {
         spawnPosP1 = GameObject.Find("SpawnPosP1").transform;
         spawnPosP2 = GameObject.Find("SpawnPosP2").transform;
         p1 = Instantiate(fastFoodPlayer, spawnPosP1.position, spawnPosP1.rotation) as GameObject;
-        p1.GetComponent<PlayerInfo>().playerIndex = 1;
+        p1.GetComponent<PlayerInfo>().playerIndex = 2;
         p2 = Instantiate(healthyPlayer, spawnPosP2.position, spawnPosP2.rotation) as GameObject;
-        p2.GetComponent<PlayerInfo>().playerIndex = 2;
+        p2.GetComponent<PlayerInfo>().playerIndex = 1;
     }
 
     public void UnlockPlayerMovements()
