@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 0cb43ca6d243e9841ab5c93372ef1ae8
-timeCreated: 1517099284
+timeCreated: 1517134053
 licenseType: Free
 ShaderImporter:
   externalObjects: {}
@@ -8,7 +8,6 @@ ShaderImporter:
   - _node_1945: {fileID: 2800000, guid: ce9e7a478b8003c41b7b3c860811edeb, type: 3}
   - _node_288: {fileID: 2800000, guid: 57d55aa5b723cd547baf346ac47833bf, type: 3}
   - _node_6577: {fileID: 2800000, guid: d5b591af200aff34da82183d0c102453, type: 3}
-  - _node_1348: {fileID: 2800000, guid: 51cf08770dd5e234a8c777b29b511b9b, type: 3}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
