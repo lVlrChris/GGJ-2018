@@ -15,6 +15,7 @@ public class PlayerHit : MonoBehaviour {
     private Material material;
 	// Use this for initialization
 	void Start () {
+        audioSource = GetComponent<AudioSource>();
         playerLoot = GetComponent<PlayerLoot>();
         playerInfo = GetComponent<PlayerInfo>();
         material = transform.GetChild(0).GetChild(1).GetComponent<SkinnedMeshRenderer>().material;
