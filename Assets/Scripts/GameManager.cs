@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour {
     public AudioSource audioSource;
     public AudioClip endMusic;
 
+
+
     private int p1Score, p2Score;
     public bool inGame = false;
 

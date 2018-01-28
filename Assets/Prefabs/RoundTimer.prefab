@@ -294,11 +294,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c18d771837547c4bc007b2e988f349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameTime: 36
+  gameTime: 20
   audioSource: {fileID: 82307260359654778}
   mainMusic: {fileID: 8300000, guid: b0212c3dc661943469d4528b6e77c541, type: 3}
   endMusic: {fileID: 8300000, guid: 1ccf1bac677eb419ea3858ed4fd18b8b, type: 3}
-  scratch: {fileID: 8300000, guid: 46c6f1e50f5d24744811f40665a50e84, type: 3}
+  announcer: {fileID: 8300000, guid: 3231af5de2c3846bc988c26ca68b675d, type: 3}
   gameTimer: {fileID: 0}
   countdownText: {fileID: 0}
   gameIntro: {fileID: 0}
