@@ -63,9 +63,14 @@ public class PlayerFire : MonoBehaviour {
             if ((rotX != 0) || rotY != 0)
             {
                 transform.rotation = Quaternion.Euler(0, heading * Mathf.Rad2Deg * -1, 0);
+                float alpha = Mathf.Lerp(material.color.a, 1f, arrowFadeSpeed * Time.deltaTime);
+                material.SetColor("_Color", new Color(material.color.r, material.color.g, material.color.b, alpha));
 
-            }else
+            }
+            else
             {
+                float alpha = Mathf.Lerp(material.color.a, 0f, arrowFadeSpeed * Time.deltaTime);
+                material.SetColor("_Color", new Color(material.color.r, material.color.g, material.color.b, alpha));
 
             }
             if (Input.GetAxisRaw("FireOSXP" + playerInfo.playerIndex) > 0.2f && canShoot)

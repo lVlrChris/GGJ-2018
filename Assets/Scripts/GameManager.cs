@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour {
     public GameObject p2;
     public Slider scoreSlider;
     private int p1Score, p2Score;
+    public bool inGame = false;
 
 
     void Start () {
@@ -38,6 +39,7 @@ public class GameManager : MonoBehaviour {
         p1.GetComponent<PlayerInfo>().playerIndex = 2;
         p2 = Instantiate(healthyPlayer, spawnPosP2.position, spawnPosP2.rotation) as GameObject;
         p2.GetComponent<PlayerInfo>().playerIndex = 1;
+        inGame = true;
     }
 
     public void UnlockPlayerMovements()
@@ -46,9 +48,16 @@ public class GameManager : MonoBehaviour {
         p2.GetComponent<PlayerMovement>().canMove = true;
     }
 
+    public void LockPlayerMovements()
+    {
+        p1.GetComponent<PlayerMovement>().canMove = false;
+        p2.GetComponent<PlayerMovement>().canMove = false;
+    }
+
     public void EndGame()
     {
         StartCoroutine(EndTheGame());
+        inGame = false;
     }
 
     public IEnumerator EndTheGame()
@@ -163,6 +172,7 @@ public class GameManager : MonoBehaviour {
 
     private void Update()
     {
-        CalculateScore();
+        if(inGame)
+            CalculateScore();
     }
 }

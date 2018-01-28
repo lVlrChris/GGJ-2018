@@ -32,13 +32,11 @@ public class RoundTimer : MonoBehaviour {
         if (!countingDown)
         {
             gameTime -= Time.deltaTime;
-            int min = Mathf.FloorToInt(gameTime / 60);
-            int sec = Mathf.FloorToInt(gameTime % 60);
-            gameTimer.text = min.ToString("00") + ":" + sec.ToString("00");
+            gameTimer.text = gameTime.ToString("00");
 
             if (gameTime < 6 && !startedEndTimer)
             {
-                StartCoroutine(AnimateSeconds(5));
+                gameTimer.gameObject.GetComponent<Animator>().SetBool("Blink", true);
                 StartCoroutine(Countdown(5));
                 audioSource.Stop();
                 audioSource.clip = endMusic;
@@ -80,15 +78,5 @@ public class RoundTimer : MonoBehaviour {
             countingDown = false;
         }
     }
-
-    IEnumerator AnimateSeconds(int n)
-    {
-        gameTimer.gameObject.GetComponent<Animator>().SetBool("Blink", true);
-        if (n > 0)
-        {
-            yield return new WaitForSeconds(1f);
-            gameTimer.gameObject.GetComponent<Animator>().SetBool("Blink", false);
-            StartCoroutine(AnimateSeconds(n - 1));
-        }
-    }
+    
 }
