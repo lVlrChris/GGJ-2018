@@ -1651,7 +1651,7 @@ Transform:
   m_LocalScale: {x: 0.38086033, y: 0.38086012, z: 0.38085997}
   m_Children: []
   m_Father: {fileID: 1960719243}
-  m_RootOrder: 80
+  m_RootOrder: 78
   m_LocalEulerAnglesHint: {x: -21.758001, y: -369.28, z: -193.29999}
 --- !u!23 &435800254
 MeshRenderer:
@@ -4726,7 +4726,7 @@ Transform:
   m_LocalScale: {x: 0.3808603, y: 0.3808602, z: 0.38086006}
   m_Children: []
   m_Father: {fileID: 1960719243}
-  m_RootOrder: 82
+  m_RootOrder: 81
   m_LocalEulerAnglesHint: {x: -45.618004, y: -415.623, z: -215.025}
 --- !u!23 &853490847
 MeshRenderer:
@@ -5743,7 +5743,7 @@ Prefab:
     - target: {fileID: 114621763918322322, guid: 085f1a26632aea64b8ebbec5759b66e2,
         type: 2}
       propertyPath: gameTime
-      value: 30
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 085f1a26632aea64b8ebbec5759b66e2, type: 2}
@@ -10274,11 +10274,11 @@ Transform:
   - {fileID: 321671856}
   - {fileID: 1517589308}
   - {fileID: 1126601923}
+  - {fileID: 435800252}
   - {fileID: 962197163}
   - {fileID: 1583578697}
-  - {fileID: 435800252}
-  - {fileID: 999656003}
   - {fileID: 853490845}
+  - {fileID: 999656003}
   - {fileID: 630158838}
   - {fileID: 329911530}
   - {fileID: 2044727149}
