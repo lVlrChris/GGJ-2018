@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6114014, g: 0.5646937, b: 0.55016255, a: 1}
+  m_IndirectSpecularColor: {r: 0.607354, g: 0.5605408, b: 0.5447832, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -7354,41 +7354,12 @@ Prefab:
     - target: {fileID: 224901222876404336, guid: 1afc5fd41c0ad124f9b6fa6bab9bd629,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0.382
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 224901222876404336, guid: 1afc5fd41c0ad124f9b6fa6bab9bd629,
         type: 2}
       propertyPath: m_AnchorMax.y
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114348741587107842, guid: 1afc5fd41c0ad124f9b6fa6bab9bd629,
-        type: 2}
-      propertyPath: m_Text
-      value: Starting..
-      objectReference: {fileID: 0}
-    - target: {fileID: 114348741587107842, guid: 1afc5fd41c0ad124f9b6fa6bab9bd629,
-        type: 2}
-      propertyPath: m_FontData.m_BestFit
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1630087465838902, guid: 1afc5fd41c0ad124f9b6fa6bab9bd629, type: 2}
-      propertyPath: m_Name
-      value: Timer
-      objectReference: {fileID: 0}
-    - target: {fileID: 114348741587107842, guid: 1afc5fd41c0ad124f9b6fa6bab9bd629,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114348741587107842, guid: 1afc5fd41c0ad124f9b6fa6bab9bd629,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 0.6117647
-      objectReference: {fileID: 0}
-    - target: {fileID: 114348741587107842, guid: 1afc5fd41c0ad124f9b6fa6bab9bd629,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 0.6117647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1afc5fd41c0ad124f9b6fa6bab9bd629, type: 2}
@@ -7399,28 +7370,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1299792705}
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
---- !u!1 &1299792707 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1630087465838902, guid: 1afc5fd41c0ad124f9b6fa6bab9bd629,
-    type: 2}
-  m_PrefabInternal: {fileID: 1299792705}
---- !u!95 &1299792708
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1299792707}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 49394dac05e543a47b8d8cc3e1c02f39, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &1312790082
 Prefab:
   m_ObjectHideFlags: 0

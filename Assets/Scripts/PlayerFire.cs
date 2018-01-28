@@ -22,11 +22,17 @@ public class PlayerFire : MonoBehaviour {
     private Material material;
     public Transform spawnPoint;
 
+    private AudioSource audioSource;
+    public AudioClip fireBlank, fire;
+    private float voiceVolume= 0.5f;
+
+
     void Start () {
         playerLoot = GetComponent<PlayerLoot>();
         playerInfo = GetComponent<PlayerInfo>();
 
         material = aimingArrow.GetComponent<SpriteRenderer>().material;
+        audioSource = GetComponent<AudioSource>();
     }
 	
 	void Update () {
@@ -105,11 +111,14 @@ public class PlayerFire : MonoBehaviour {
                             print("Fire GRAPES!");
                             break;
                     }
+                    audioSource.PlayOneShot(fire, voiceVolume);
+
                     playerLoot.LootedHealthyFood.RemoveAt(playerLoot.LootedHealthyFood.Count - 1);
                     GetComponent<PlayerInfo>().firedShots++;
                     GetComponent<PlayerLoot>().HealthCount--;
                 }else
                 {
+                    audioSource.PlayOneShot(fireBlank,voiceVolume);
                     Instantiate(nope, spawnPoint.transform.position, spawnPoint.transform.rotation, transform);
                     print("You dont have any healthy");
                 }
