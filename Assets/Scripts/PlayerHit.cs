@@ -6,6 +6,11 @@ using UnityEngine.SceneManagement;
 public class PlayerHit : MonoBehaviour {
     public  PlayerLoot playerLoot;
     public PlayerInfo playerInfo;
+    private AudioSource audioSource;
+
+    public AudioClip hurt;
+    private float volume = 0.3f;
+
 
     private Material material;
 	// Use this for initialization
@@ -33,6 +38,7 @@ public class PlayerHit : MonoBehaviour {
                     playerLoot.HealthCount++;
                     break;
             }
+            audioSource.PlayOneShot(hurt, volume);
             StartCoroutine(OnHitShader());
             GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShake>().ShakeCamera();
             GetComponent<Rigidbody>().AddForce((transform.position - col.transform.position).normalized * 15, ForceMode.Impulse);
