@@ -12,6 +12,9 @@ public class RoundTimer : MonoBehaviour {
     public AudioClip mainMusic;
     public AudioClip endMusic;
 
+    public AudioClip announcer;
+
+
     bool endMusicPlaying = false;
     bool countingDown = true;
     public Text gameTimer;
@@ -22,7 +25,7 @@ public class RoundTimer : MonoBehaviour {
 	void Start () {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         audioSource.Play();
-
+        audioSource.PlayOneShot(announcer, 0.4F);
 
         StartCoroutine(WaitForIntroAndCount());
 	}
