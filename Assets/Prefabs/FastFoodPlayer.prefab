@@ -582,7 +582,7 @@ MonoBehaviour:
   apple: {fileID: 1890885277596958, guid: 8123e618bef6ab04b90515700ef0f95e, type: 2}
   grapes: {fileID: 1709238735215474, guid: 835930cd4f328b1458fb250de5037591, type: 2}
   banana: {fileID: 1774271316708424, guid: 9291027d091833648bb4e015d5965b77, type: 2}
-  nope: {fileID: 1268871384574504, guid: a7198f738ebdf354f98c4550950d0235, type: 2}
+  nope: {fileID: 1065182131184736, guid: 0535314a9205ee34daa6a1c1b3a58957, type: 2}
   aimingArrow: {fileID: 4585488015606000}
   arrowFadeSpeed: 5
   spawnPoint: {fileID: 4377493113790670}
