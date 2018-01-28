@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114355020077030066}
   - component: {fileID: 65419334167017596}
   - component: {fileID: 54736351210964226}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HotdogProjectile
   m_TagString: Projectile
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 4924053382665678}
   - component: {fileID: 33079258347995546}
   - component: {fileID: 23554651518476322}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HotdogBun1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

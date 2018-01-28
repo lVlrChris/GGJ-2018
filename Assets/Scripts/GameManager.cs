@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour {
     public GameObject p1;
     public GameObject p2;
     public Slider scoreSlider;
-
+    private int p1Score, p2Score;
 
 
     void Start () {
@@ -84,15 +84,14 @@ public class GameManager : MonoBehaviour {
 
 
         Text winnerText = GameObject.Find("WinnerText").GetComponent<Text>();
-        int winner = DetermineWinner(p1stats, p2stats);
-        if (winner == 0) { winnerText.text = "DRAW"; }
-        else { winnerText.text = "Player " + winner + " wins"; }
+        string winner = DetermineWinner(p1stats, p2stats);
+        winnerText.text =  winner; 
         print(winnerText.text);
     }
 
-    public int DetermineWinner(PlayerEndScreenStats p1stats, PlayerEndScreenStats p2stats)
+    public string DetermineWinner(PlayerEndScreenStats p1stats, PlayerEndScreenStats p2stats)
     {
-
+        /*
         int p1Score = 0;
         int p2Score = 0;
 
@@ -106,9 +105,10 @@ public class GameManager : MonoBehaviour {
         if (p1stats.GetLandedShotPercentage() > p2stats.GetLandedShotPercentage());
         print("p1 score: " + p1Score);
         print("p2 score: " + p2Score);
-
-        if (p1Score == p2Score) { return 0; }
-        return p1Score > p2Score ? 1 : 2;
+        */
+        print("WOW " + p1Score + " vs " + p2Score + "!");
+        if (p1Score == p2Score) { return "DRAW"; }
+        return p1Score > p2Score ? "SNACKY WINS" : "FRUITY WINS";
     }
 
 
@@ -132,6 +132,8 @@ public class GameManager : MonoBehaviour {
         p1Points += (p1Loot.HealthCount * ScorePoints.wrongFood);
         print("p1 score "+ p1Points);
 
+        print(p1.name);
+
         var p2Points = p2stats.DietPoints * ScorePoints.dietfood;
         p2Points += p2stats.FiredShots * ScorePoints.shotPenalty;
         p2Points += p2stats.LandedShots * ScorePoints.accuracyBonus;
@@ -141,22 +143,27 @@ public class GameManager : MonoBehaviour {
 
         if (p1Points < 0) p1Points = 0;
         if (p2Points < 0) p2Points = 0;
-
+        if(p1Points <= 0 && p2Points <= 0) { }
 
         float p1Percentage, p2Percentage;
         p1Percentage = (p1Points / (p1Points + p2Points) ) * 100;
+        p2Percentage = (p2Points / (p1Points + p2Points)) * 100;
         print("p1% : " + p1Percentage);
+        print("p2% : " + p2Percentage);
+
+        if (p1Points <= 0 && p2Points <= 0) { p2Percentage = 50;  }
+
+        p1Score = (int)p1Points;
+        p2Score = (int)p2Points;
 
         var healthbar = GameObject.FindWithTag("ScoreSlider");
         print(healthbar.GetComponent<Slider>().value);
-        healthbar.GetComponent<Slider>().value = (p1Percentage / 100);  //.GetComponent<Slider>().value = (p1Percentage / 100);
+        healthbar.GetComponent<Slider>().value = (p2Percentage / 100);  //.GetComponent<Slider>().value = (p1Percentage / 100);
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown("space"))
-        {
-            CalculateScore();
-        }
+
+        CalculateScore();
     }
 }

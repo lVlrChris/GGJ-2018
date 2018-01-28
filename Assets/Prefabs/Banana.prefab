@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4442671552989258}
   - component: {fileID: 33412589919828234}
   - component: {fileID: 23708459877467334}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Banana01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4748627376112214}
   - component: {fileID: 65428805575631510}
   - component: {fileID: 95784324889351152}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Banana
   m_TagString: HealthyFood
   m_Icon: {fileID: 0}

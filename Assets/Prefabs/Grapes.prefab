@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4493760413669036}
   - component: {fileID: 65878448464753292}
   - component: {fileID: 95364865198814898}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Grapes
   m_TagString: HealthyFood
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4461760506797966}
   - component: {fileID: 33154648214594708}
   - component: {fileID: 23565944554101066}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Grapes01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
